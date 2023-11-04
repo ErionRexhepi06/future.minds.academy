@@ -1,0 +1,36 @@
+#b1{
+    background-image: url(../images/sunset1.webp);
+    background-size: 1400px 800px;
+}
+
+#b2{
+    background-image: url(../images/sunset1.webp);
+    background-size: 1500px 875px;
+}   
+
+
+h1{
+    font-size: 50px;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(181,106,134,1) 33%, rgba(252,176,69,1) 100%);
+}
+
+nav{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,0.3) 0%, rgba(181,106,134,0.3) 33%, rgba(252,176,69,0.3) 100%);
+}
+
+button{
+    background-color:rgba(252,176,69,1);
+}
+
+p{
+    font-size: 20px;
+    background: rgba(131,58,180,0.5);
+    background: linear-gradient(90deg, rgba(131,58,180,0.5) 0%, rgba(181,106,134,0.5) 33%, rgba(252,176,69,0.5) 100%);  
+}
+
+#f1{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(181,106,134,1) 33%, rgba(252,176,69,1) 100%);
+}
