@@ -1,0 +1,36 @@
+#p1::first-letter {
+    font-size: 300%;
+    color: orangered;
+  }
+
+#s1{
+  font-size: 35px;
+}
+
+#html{
+  text-decoration: underline orangered;
+}
+
+#p2::first-letter {
+  font-size: 300%;
+  color: blue;
+}
+
+#s2{
+  font-size: 35px;
+}
+
+#css{
+  text-decoration:underline blue;
+}
+
+h1{
+  text-align: center;
+  text-decoration: double underline black;
+  font-size: 40px;
+}
+
+body{
+  background-color: burlywood;
+}
+
