@@ -1,0 +1,106 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+}
+
+nav {
+    background-image: url(./images/nav-bgr.png);
+    background-position: -200px;
+    flex: 1;
+}
+
+.avatar{
+    display: flex;
+}
+
+.avatar span{
+    flex: 1;
+}
+
+.avatar h4{
+    flex: 3;
+    color: white;
+    margin: auto;
+}
+
+.nav-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    padding: 10px;
+}
+
+hr {
+    margin: 15px 0px;
+    color: rgb(180, 180, 180);
+}
+
+nav li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+nav a {
+    display: block;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    border-radius: 2px;
+}
+
+.active-state {
+    background-color: brown;
+}
+
+nav a:hover {
+    display: block;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    border-radius: 2px;
+}
+
+.right-side {
+    flex-direction: column;
+    flex: 5;
+    height: 100vh;
+}
+
+header {
+    background-color: rgb(188, 246, 246);
+    padding: 10px;
+    height: 5vh;
+}
+
+main {
+    display: flex;
+}
+
+article {
+    background-color: rgb(255, 250, 196);
+    padding: 10px;
+    flex: 5;
+    height: 90vh;
+}
+
+aside {
+    background-color: rgb(255, 0, 251);
+    padding: 10px;
+    flex: 1;
+}
+
+footer {
+    background-color: yellow;
+    padding: 10px;
+    height: 5vh;
+}

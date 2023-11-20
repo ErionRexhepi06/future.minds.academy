@@ -1,0 +1,15 @@
+li:nth-child(n+1) {
+    background-color: green;
+}
+
+li:nth-child(n+2)  {
+    background-color: greenyellow;
+}
+
+th {
+    color: gray;
+}
+
+table{
+    border-collapse: collapse;
+}

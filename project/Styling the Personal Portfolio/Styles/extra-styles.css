@@ -1,0 +1,219 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(https://cdn.theatlantic.com/thumbor/EmW-E0FwUa0MhOoGk0BXYyBiBm0=/0x0:1718x1718/1718x1718/media/files/est/space-calculator/background6.jpg);
+    overflow: hidden;
+}
+
+.contanier {
+    font-size: 10px;
+    width: 40em;
+    height: 40em;
+    position: relative;
+    margin: 20%;
+}
+
+.sun {
+    position: absolute;
+    top: 15em;
+    left: 15em;
+    width: 10em;
+    height: 10em;
+    background-image: url(../images&vids/sunsurface1.jpeg);
+    background-size: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 6em orangered;
+}
+
+.earth,
+.moon {
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+}
+
+.earth {
+    top: 5em;
+    left: 5em;
+    width: 30em;
+    height: 30em;
+    animation: orbit 36.5s linear infinite;
+}
+
+.moon {
+    top: 0em;
+    right: 0em;
+    width: 8em;
+    height: 8em;
+    animation: orbit 2.7s linear infinite;
+}
+
+.earth::before,
+.moon::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.earth::before {
+    top: 2.8em;
+    right: 2.8em;
+    width: 3em;
+    height: 3em;
+    background-color: aqua;
+}
+
+.moon::before {
+    top: 0.8em;
+    right: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background-color: silver;
+}
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.animation {
+    flex: 5;
+    margin-right: 100px;
+}
+
+.s2 {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.t1 {
+    flex: 1;
+    padding: 10px;
+    background: linear-gradient(90deg, rgba(147, 146, 112, 0.8071603641456583) 0%, rgba(105, 78, 63, 0.8295693277310925) 17%, rgba(255, 102, 0, 0.8463760504201681) 100%);
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+    width: 550px;
+    border: 5px solid orangered;
+    color: azure;
+    border-radius: 10px;
+}
+
+.t2 {
+    flex: 1;
+    padding: 10px;
+    background: linear-gradient(90deg, rgba(48, 118, 214, 1) 2%, rgba(46, 170, 56, 0.9108018207282913) 49%, rgba(79, 96, 235, 1) 100%);
+    border: 5px solid rgb(109, 131, 65);
+    color: white;
+    margin-top: 80px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+    width: 550px;
+    border-radius: 10px;
+}
+
+.t3 {
+    flex: 1;
+    padding: 10px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.36738445378151263) 42%, rgba(68, 68, 68, 0.35898109243697474) 79%);
+    border: 5px solid rgb(104, 104, 104);
+    color: white;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    margin-right: 20px;
+    width: 550px;
+    border-radius: 10px;
+}
+ 
+.t1:hover,
+.t2:hover,
+.t3:hover {
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+    box-shadow: 0 0 30px white;
+}
+
+.button-85 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    top: -250px;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-85:before {
+    content: "";
+    background: linear-gradient(45deg,
+            #ff0000,
+            #ff7300,
+            #fffb00,
+            #48ff00,
+            #00ffd5,
+            #002bff,
+            #7a00ff,
+            #ff00c8,
+            #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.button-85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}

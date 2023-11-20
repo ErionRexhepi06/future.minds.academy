@@ -1,0 +1,18 @@
+section{
+    background-color: rgb(104, 87, 87);
+    border: 5px solid rgb(167, 99, 99);
+    border-radius: 30px;
+    color: antiquewhite;
+    width: 500px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+section:hover{
+    background-color: gray;
+    border: 5px solid rgb(14, 13, 13);
+}
+
+section:hover:first-letter{
+    font-size: 30px;
+}
