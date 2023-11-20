@@ -1,0 +1,22 @@
+body {
+    background-color: pink;
+}
+
+section {
+    width: 300px;
+    background-color: cadetblue;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 40px;
+    padding: 30px;
+    text-align: center;
+    margin: 10px;
+}
+
+p {
+    width: 200px;
+    background-color: rgb(85, 52, 52);
+    border: 3px solid black;
+    margin: auto;
+    padding: 10px;
+    border-radius: 50px;
+}
