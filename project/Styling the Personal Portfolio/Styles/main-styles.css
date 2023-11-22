@@ -1,3 +1,7 @@
+* {
+    cursor: url(../images&vids/rocket.png), auto;
+}
+
 body {
     background: url(../images&vids/space\ bcg.avif);
     text-align: center;
@@ -55,7 +59,8 @@ footer {
 }
 
 a {
-    color: black;
+    color: rgb(131, 0, 0);
+    text-decoration: dashed;
 }
 
 .vist-p {
@@ -87,6 +92,23 @@ form {
     color: black;
     font-family: cursive, sans-serif;
     font-weight: 300;
+}
+
+.education-ul .PS,
+.education-ul .CO,
+.education-ul .MS {
+    border: 5px solid rgb(0, 0, 0);
+    background-color: rgba(165, 150, 179, 0.7);
+    margin: 10px;
+    border-radius: 50px;
+    padding-left: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+    color: black;
+    font-family: cursive, sans-serif;
+    font-weight: 300;
+    text-align: left;
 }
 
 .education-ul,
@@ -128,7 +150,7 @@ video {
     margin-top: 15px;
 }
 
-.con-img{
+.con-img {
     border: 3px solid white;
     border-radius: 30px;
 }
@@ -264,53 +286,105 @@ nav ul li {
 }
 
 .visit-btn {
-  background-color: #0078d0;
-  border: 0;
-  border-radius: 56px;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  outline: 0;
-  padding: 2px 2px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transition: all .3s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+    background-color: #0078d0;
+    border: 0;
+    border-radius: 56px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    outline: 0;
+    padding: 2px 2px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
 .visit-btn:before {
-  background-color: initial;
-  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
-  border-radius: 125px;
-  content: "";
-  height: 50%;
-  left: 4%;
-  opacity: .5;
-  position: absolute;
-  top: 0;
-  transition: all .3s;
-  width: 92%;
+    background-color: initial;
+    background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+    border-radius: 125px;
+    content: "";
+    height: 50%;
+    left: 4%;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    transition: all .3s;
+    width: 92%;
 }
 
 .visit-btn:hover {
-  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
-  transform: scale(1.05);
+    box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+    transform: scale(1.05);
 }
 
 @media (min-width: 700px) {
-  .visit-btn {
-    padding: 5px 15px;
-  }
+    .visit-btn {
+        padding: 5px 15px;
+    }
+}
+
+.prj-button {
+    align-items: center;
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 15px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 100px;
+    padding: 2px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    position: relative;
+    left: 220px;
+    bottom: 35px;
+}
+
+.prj-button:active,
+.prj-button:hover {
+    outline: 0;
+}
+
+.prj-button span {
+    background-color: rgb(5, 6, 45);
+    padding: 5px 5px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+}
+
+.prj-button:hover span {
+    background: none;
+}
+
+@media (min-width: 768px) {
+    .prj-button {
+        font-size: 15px;
+        min-width: 100px;
+    }
 }
 
 /* contact */
-.contact{
+.contact {
     width: 500px;
     background: rgb(26, 188, 156);
     background: -moz-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
@@ -384,7 +458,7 @@ nav ul li {
     animation: float 6s ease-in-out infinite;
 }
 
-.avatar .snapimg{
+.avatar .snapimg {
     width: 30em;
     height: 30em;
     display: block;
@@ -399,4 +473,16 @@ nav ul li {
     padding: 20px 40px;
     box-sizing: border-box;
     text-align: center;
+}
+
+textarea,
+input {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #28282d;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: 3px solid rgb(228, 142, 228);
+    border-radius: 30px;
+    padding: 10px;
 }
