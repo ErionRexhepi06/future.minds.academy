@@ -486,3 +486,15 @@ input {
     border-radius: 30px;
     padding: 10px;
 }
+
+table{
+    background-color: #0078d0;
+    border-collapse: collapse;
+    border: 5px solid;
+    height: 100px;
+}
+
+td {
+    background-color: rgb(66, 144, 201);
+}
+
