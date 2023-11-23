@@ -498,3 +498,6 @@ td {
     background-color: rgb(66, 144, 201);
 }
 
+html {
+    scroll-behavior: smooth;
+}
