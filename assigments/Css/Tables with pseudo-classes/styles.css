@@ -1,8 +1,8 @@
-li:nth-child(n+1) {
+li:nth-child(1) {
     background-color: green;
 }
 
-li:nth-child(n+2)  {
+li:nth-child(2) {
     background-color: greenyellow;
 }
 
@@ -10,6 +10,6 @@ th {
     color: gray;
 }
 
-table{
+table {
     border-collapse: collapse;
 }
