@@ -1,15 +1,26 @@
-li:nth-child(1) {
-    background-color: green;
+body{
+    background-color: burlywood;
 }
 
-li:nth-child(2) {
+tr:nth-child(odd) {
+    background-color: rgb(77, 134, 77);
+}
+
+tr:nth-child(even) {
     background-color: greenyellow;
 }
 
 th {
-    color: gray;
+    color: rgb(255, 255, 255);
 }
 
 table {
     border-collapse: collapse;
+    width: 80%;
+    height: 300px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: 4px dashed black;
 }
