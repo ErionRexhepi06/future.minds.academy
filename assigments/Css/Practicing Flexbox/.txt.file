@@ -1,0 +1,170 @@
+LVL 1 =
+#pond {
+  display: flex;
+ justify-content: flex-end;
+}
+
+LVL 2 =
+#pond {
+  display: flex;
+ justify-content: center;
+}
+
+LVL 3 =
+#pond {
+  display: flex;
+justify-content:space-around;
+}
+
+LVL 4 =
+#pond {
+  display: flex;
+justify-content: space-between;
+}
+
+LVL 5 =
+#pond {
+  display: flex;
+align-items: flex-end;
+}
+
+LVL 6 =
+#pond {
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+
+LVL 7 =
+#pond {
+  display: flex;
+justify-content: space-around;
+align-items: flex-end;
+}
+
+LVL 8 =
+#pond {
+  display: flex;
+flex-direction: row-reverse;
+}
+
+LVL 9 =
+#pond {
+  display: flex;
+flex-direction: column;
+}
+
+LVL 10 =
+#pond {
+  display: flex;
+flex-direction: row-reverse;
+justify-content: flex-end;
+}
+
+LVL 11 =
+#pond {
+  display: flex;
+flex-direction: column;
+justify-content: flex-end;
+}
+
+LVL 12 =
+#pond {
+  display: flex;
+flex-direction: column-reverse;
+justify-content: space-between;
+}
+
+LVL 13 =
+#pond {
+  display: flex;
+flex-direction: row-reverse;
+justify-content: center;
+align-items: flex-end;
+}
+
+LVL 14 =
+#pond {
+  display: flex;
+}
+.yellow {
+order: 1;
+}
+
+LVL 15 =
+#pond {
+  display: flex;
+}
+.red {
+order:-3;
+}
+
+LVL 16 =
+#pond {
+  display: flex;
+  align-items: flex-start;
+}
+.yellow {
+align-self: flex-end;
+}
+
+LVL 17 =
+#pond {
+  display: flex;
+  align-items: flex-start;
+}
+.yellow {
+order: 2;
+align-self: flex-end;
+}
+
+LVL 18 =
+#pond {
+  display: flex;
+flex-wrap: wrap;
+}
+
+LVL 19 =
+#pond {
+  display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+}
+
+LVL 20 =
+#pond {
+  display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+}
+
+LVL 21 =
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+align-content: flex-start;
+align-items: stretch;
+}
+
+LVL 22 =
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+align-content: flex-end;
+}
+
+LVL 23 =
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+flex-direction: column-reverse;
+align-content: center;
+}
+
+LVL 24 =
+#pond {
+  display: flex;
+flex-flow:column-reverse wrap-reverse;
+justify-content:center;
+align-content:space-between;
+}
