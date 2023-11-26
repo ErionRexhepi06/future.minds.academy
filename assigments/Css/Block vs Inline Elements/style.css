@@ -1,0 +1,26 @@
+body {
+    background-color: cornflowerblue;
+}
+
+section{
+    width: 700px;
+    border: 3px dashed red;
+    padding: 10px;
+    margin: 20px;
+}
+
+p.start {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: justify;
+    display: inline;
+}
+
+h1.start {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    line-height: 28px;
+    margin: 0;
+    display: inline-block;
+}
