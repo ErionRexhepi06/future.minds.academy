@@ -1,0 +1,31 @@
+ 
+.search-bar {
+    width: 15em;
+    padding: 0.5em;
+    margin: 1em;
+    border-radius: 7em;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    box-shadow: inset 0px 0px 20px lightgrey;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(145, 145, 145);
+}
+
+.search-bar-input {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    outline: 1.2em;
+    color: inherit;
+}
+
+.search-icon {
+    width: 1.5em;
+}
+
+.search-bar-input::placeholder{
+    color: #b6b6b6;
+}
