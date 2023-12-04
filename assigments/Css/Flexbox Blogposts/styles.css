@@ -294,5 +294,4 @@ footer {
 
 html {
     scroll-behavior: smooth;
-    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
 }
