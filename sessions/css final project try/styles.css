@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.site {
+    display: grid;
+    grid-template-areas: "aside" "header" "main" "footer";
+    grid-template: "aside header header header"
+                   "aside main main main"
+                   "aside footer footer footer";
+}
+
+aside {
+    grid-area: "aside";
+    background-color: aqua;
+}
+
+header {
+    grid-area: "header";
+    background-color: blueviolet;
+}
+
+main {
+    grid-area: "main";
+    background-color: blue;
+}
+
+footer {
+    grid-area: "footer";
+    background-color: brown;
+}

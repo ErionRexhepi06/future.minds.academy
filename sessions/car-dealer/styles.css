@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-image: linear-gradient(rgba(10, 9, 68, 0.5), rgba(18, 9, 68, 0.5)), url(./img/images/welcome-hero/welcome-banner.jpg);
+    background-size: cover;
+    height: 700px;
+}
+
+nav li {
+    float: left;
+    margin-left: 30px;
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+nav a:hover {
+    color: rgb(43, 43, 201);
+    transition: 0.5s;
+}
+
+nav ul {
+    float: right;
+}
+
+.active {
+    color: rgb(43, 43, 201);
+}
+
+.topnavbgr {
+    background-color: black;
+    padding: 20px;
+    color: white;
+}
+
+.topnav {
+    display: flex;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.topnav h2 {
+    flex: 4;
+}
+
+.topnav nav {
+    flex: 6;
+    justify-self: right;
+}
+
+.hero-header {
+    width: 1100px;
+    margin: 120px auto;
+    color: white;
+    text-align: center;
+}
+
+.hero-header h1 {
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.hero-header p {
+    font-size: 1.4em;
+    width: 600px;
+    margin: 40px auto;
+}
+
+.btn {
+    padding: 15px 30px;
+    color: white;
+    background-color: #437cd1;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: #15458e;
+}
+
+.search-box {
+    width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    gap: 50px;
+    grid-template-areas:
+        'col1 col2 col3 searchbtn '
+        'col4 col5 col6 searchbtn';
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.74) 0px 5px 15px;
+}
+
+.p50 {
+    padding: 50px;
+}
+
+.item1 {
+    grid-area: col1;
+}
+
+.item2 {
+    grid-area: col2;
+}
+
+.item3 {
+    grid-area: col3;
+}
+
+.item4 {
+    grid-area: col4;
+}
+
+.item5 {
+    grid-area: col5;
+}
+
+.item6 {
+    grid-area: col6;
+}
+
+.item7 {
+    grid-area: searchbtn;
+    align-self: center;
+    text-align: center;
+}
+
+select {
+   background-color: rgb(185, 183, 183);
+   border: 5px;
+   padding: 15px;
+   width: 100%;
+   margin-top: 15px;
+   margin-bottom: 15px;
+}
+
+.value-prop {
+    width: 1100px;
+    margin: 250px auto 50px auto;
+}

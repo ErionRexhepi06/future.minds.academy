@@ -87,6 +87,7 @@ header img {
     background: radial-gradient(circle, rgba(35,152,193,0.8715861344537815) 48%, rgba(41,131,136,0.7511379551820728) 96%);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     cursor: pointer;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
 }
 
 .h-bttn1:hover {
@@ -101,6 +102,7 @@ header img {
     background: radial-gradient(circle, rgba(35,152,193,0.8715861344537815) 48%, rgba(41,131,136,0.7511379551820728) 96%);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     cursor: pointer;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
 }
 
 .h-bttn2:hover {
@@ -173,6 +175,7 @@ article h2 {
     border-radius: 50%;
     cursor: pointer;
     margin: 5px;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
 }
 
 .user-profile:hover {
@@ -243,6 +246,7 @@ article p {
     padding: 3px;
     border-radius: 50%;
     cursor: pointer;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
 }
 
 .reactions-bttn:hover {

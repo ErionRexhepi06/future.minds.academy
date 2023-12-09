@@ -31,6 +31,7 @@ main {
     background-size: 500px;
     margin-top: 2em;
     margin-bottom: 2em;
+    transition: all 0.7s cubic-bezier(.25, .4, .45, 1.4);
 }
 
 .top {
