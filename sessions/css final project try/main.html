@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 </head>
 
 <body>
@@ -16,50 +18,109 @@
             </div>
             <hr>
             <div class="acc-aside">
-                <span><img src=""></span>
-                <span>John Doe</span>
-                <span><img src=""></span>
+                <label for="acc1"><img src="./images/avatar.jpg">
+                    <p>John Doe</p>
+                </label>
+                <select id="acc1"></select>
             </div>
             <hr>
             <nav>
                 <ul>
-                    <li><img src="" class=""> Dashboard </li>
-                    <li><img src="" class=""> Pages <img src=""></li>
-                    <li><img src="" class=""> Components <img src=""></li>
-                    <li><img src="" class=""> Forms <img src=""></li>
-                    <li><img src="" class=""> Tables <img src=""></li>
-                    <li><img src="" class=""> Maps <img src=""></li>
-                    <li><img src="" class=""> Widgets <img src=""></li>
-                    <li><img src="" class=""> Charts <img src=""></li>
-                    <li><img src="" class=""> Calendar <img src=""></li>
+                    <li class="active">
+                        <label for="n1"><span class="material-icons">dashboard</span>
+                            <p> Dashboard </p>
+                        </label>
+                        <select id="n1"></select>
+                    </li>
+                    <li class="no-a">
+                        <label for="n2"><span class="material-icons">image</span>
+                            <p> Pages </p>
+                        </label>
+                        <select id="n2"></select>
+                    </li>
+                    <li class="no-a">
+                        <label for="n3"><span class="material-icons">apps</span>
+                            <p> Components </p>
+                        </label>
+                        <select id="n3"></select>
+                    </li>
+                    <li class="no-a">
+                        <label for="n4"><span class="material-icons">assignment</span>
+                            <p> Forms </p>
+                        </label>
+                        <select id="n4"></select>
+                    </li>
+                    <li class="no-a">
+                        <label for="n5"><span class="material-icons">dataset</span>
+                            <p> Tables </p>
+                        </label>
+                        <select id="n5"></select>
+                    </li>
+                    <li class="no-a">
+                        <label for="n6"><span class="material-icons">map</span>
+                            <p> Maps </p>
+                        </label>
+                        <select id="n6"></select>
+                    </li>
+                    <li class="no-a">
+                        <label for="n7"><span class="material-icons">widgets</span>
+                            <p> Widgets </p>
+                        </label>
+                        <select id="n7"></select>
+                    </li>
+                    <li class="no-a">
+                        <label for="n8"><span class="material-icons">show_chart</span>
+                            <p> Charts </p>
+                        </label>
+                        <select id="n8"></select>
+                    </li>
+                    <li class="no-a">
+                        <label for="n9"><span class="material-icons">calendar_month</span>
+                            <p> Calendar </p>
+                        </label>
+                        <select id="n9"></select>
+                    </li>
                 </ul>
             </nav>
         </aside>
 
         <header>
             <div class="header-left">
-                <span><img src=""></span>
+                <span class="material-icons hl-icon tooltip">more_vert</span>
                 <span>Dashboard</span>
             </div>
 
             <div class="header-right">
-                <span>search bar <img src=""></span>
-                <span><img src=""></span>
-                <span><img src=""></span>
-                <span><img src=""></span>
+                <input type="text" id="srch-bar" placeholder="search...">
+                <label class="srch-bar" for="srch-bar"><span class="material-icons tooltip">search</span></label>
+                <span class="material-icons tooltip">dashboard</span>
+                <span>
+                    <div class="dropdown">
+                        <button class="material-icons tooltip">notifications</button>
+                        <div class="content">
+                            <a href="">John Doe sent amessage</a>
+                            <a href="">Someone viewed your profile</a>
+                            <a href="">John Doe sent amessage</a>
+                            <a href="">Someone viewed your profile</a>
+                            <a href="">Another message</a>
+                        </div>
+                    </div>
+                </span>
+
+                <span class="material-icons tooltip">person</span>
             </div>
         </header>
 
         <main>
 
 
-            <section>
+            <section class="s1">
                 <div class="top-s1">
-                    <span><img src=""></span>
-                    <span>Global sales by Top Locations</span>
+                    <span class="top-i-s1"><span class="material-icons top-icon-s1">language</span></span>
+                    <span>Global Sales by Top Locations</span>
                 </div>
 
-                <div>
+                <div class="bottom-s1">
                     <div class="s1-left">
                         <div>
                             <span><img src="">country</span>
@@ -99,9 +160,12 @@
                         <hr>
                     </div>
 
-                    <div class="s1-right">
+                    <div class="map-responsive">
                         <figure>
-                            (map)
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d278876.69186753646!2d-74.22136445989719!3d40.69622918213496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1702371043650!5m2!1sen!2s"
+                                width="100%" height="300em" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </figure>
                     </div>
                 </div>
@@ -222,7 +286,7 @@
 
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem at quo commodi
-                            laudantium
+                            laudantium <br>
                             rerum amet a expedita ipsum quidem qui. Quas officia culpa vero eaque quam, ab veniam
                             corrupti
                             eveniet!
@@ -250,7 +314,7 @@
 
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem at quo commodi
-                            laudantium
+                            laudantium <br>
                             rerum amet a expedita ipsum quidem qui. Quas officia culpa vero eaque quam, ab veniam
                             corrupti
                             eveniet!

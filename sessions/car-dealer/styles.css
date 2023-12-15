@@ -213,7 +213,7 @@ select {
 .Featured-items {
     display: flex;
     flex-direction: column;
-    background-color: rgb(216, 216, 216);
+    background-color: rgba(216, 216, 216, 0.74);
     margin-top: 100px;
     padding: 30px;
 }

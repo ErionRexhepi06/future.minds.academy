@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .site {
+        display: grid;
+        grid-template-columns: repeat(10) 1fr;
+        grid-template-rows: repeat(10) 1fr;
+    }
+
+    aside {
+        grid-area: 1/1/11/4;
+        background-color: aqua;
+    }
+
+    header {
+        grid-area: 1/4/3/11;
+        background-color: blue;
+    }
+
+    main {
+        grid-area: 3/4/9/11;
+        background-color: blueviolet;
+    }
+
+    footer {
+        grid-area: 9/4/11/11;
+        background-color: brown;
+    }
+</style>
+
+<body>
+    <div class="site">
+        <aside>1</aside>
+        <header>2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi beatae, voluptate, sint iste maxime alias, ullam veritatis quasi sed voluptates omnis enim quos impedit? Alias maiores vitae et voluptates illo?</header>
+        <main>3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi beatae, voluptate, sint iste maxime
+            alias, ullam veritatis quasi sed voluptates omnis enim quos impedit? Alias maiores vitae et voluptates
+            illo?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi beatae, voluptate, sint iste maxime
+            alias, ullam veritatis quasi sed voluptates omnis enim quos impedit? Alias maiores vitae et voluptates
+            illo?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi beatae, voluptate, sint iste maxime
+            alias, ullam veritatis quasi sed voluptates omnis enim quos impedit? Alias maiores vitae et voluptates
+            illo?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi beatae, voluptate, sint iste maxime
+            alias, ullam veritatis quasi sed voluptates omnis enim quos impedit? Alias maiores vitae et voluptates
+            illo?vvvLorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi beatae, voluptate, sint iste
+            maxime alias, ullam veritatis quasi sed voluptates omnis enim quos impedit? Alias maiores vitae et
+            voluptates illo?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi beatae, voluptate, sint
+            iste maxime alias, ullam veritatis quasi sed voluptates omnis enim quos impedit? Alias maiores vitae et
+            voluptates illo?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi beatae, voluptate, sint
+            iste maxime alias, ullam veritatis quasi sed voluptates omnis enim quos impedit? Alias maiores vitae et
+            voluptates illo?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi beatae, voluptate, sint
+            iste maxime alias, ullam veritatis quasi sed voluptates omnis enim quos impedit? Alias maiores vitae et
+            voluptates illo?v</main>
+        <footer>4</footer>
+    </div>
+</body>
+
+</html>
