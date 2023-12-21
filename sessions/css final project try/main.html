@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
+.top-aside-gr { display: flex; flex-direction: column; gap: 1.5rem;}
+.top-aside { display: flex; flex-direction: row; gap: 1rem; font-size: 1.3rem;}
+.aside-acc { align-content: center;}
+.aside-acc img {border-radius: 50%; width: 2.5em;}
+.aside-row { display: flex; flex-direction: row; justify-content: space-between;}
+aside nav ul {display: flex; flex-direction: column; gap: 0em;}
+aside label { display: flex; flex-direction: row; align-items: center; gap: 1rem; list-style: none;}
+aside select { border: none; background-color: transparent; filter: invert(100%);}
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,17 +95,17 @@
 
         <header>
             <div class="header-left">
-                <span class="material-icons hl-icon tooltip">more_vert</span>
+                <span class="material-icons hl-icon ">more_vert</span>
                 <span>Dashboard</span>
             </div>
 
             <div class="header-right">
                 <input type="text" id="srch-bar" placeholder="search...">
-                <label class="srch-bar" for="srch-bar"><span class="material-icons tooltip">search</span></label>
-                <span class="material-icons tooltip">dashboard</span>
+                <label class="srch-bar" for="srch-bar"><span class="material-icons ">search</span></label>
+                <span class="material-icons ">dashboard</span>
                 <span>
                     <div class="dropdown">
-                        <button class="material-icons tooltip">notifications</button>
+                        <button class="material-icons ">notifications</button>
                         <div class="content">
                             <a href="">John Doe sent amessage</a>
                             <a href="">Someone viewed your profile</a>
@@ -107,7 +116,7 @@
                     </div>
                 </span>
 
-                <span class="material-icons tooltip">person</span>
+                <span class="material-icons ">person</span>
             </div>
         </header>
 

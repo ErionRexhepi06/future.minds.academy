@@ -4,6 +4,19 @@
     font-family: sans-serif;
 }
 
+@media (max-width: 1000px) {
+    body { display: grid;
+           padding-inline: 10rem;
+           background-color: brown;
+           grid-template-columns: 1fr;
+           grid-template-rows: repeat(3) 1fr;
+    }
+    aside { display: none;}
+    header { grid-area: 1/1/2/2;}
+    main { grid-area: 2/1/3/2;}
+    footer { grid-area: 3/1/4/1;}
+}
+
 .material-icons {
     cursor: pointer;
 }

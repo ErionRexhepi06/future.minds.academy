@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="left-side">
+        <aside class="hide-below-1000px">
+            <div class="top-aside flex-row-gap1em"><span>CP</span> <span>COOL PAGE</span></div>
+            <hr>
+            <div class="aside-acc aside-row flex-row-sb">
+                <label for="acc1" class="flex-row-gap"><img class="border-rad-50pc pointer" src="./images/avatar.jpg">
+                    <p>John Doe</p>
+                </label>
+                <select id="acc1"></select>
+            </div>
+
+            <hr>
+            <nav class="flex-column-gap03">
+                <ul>
+                    <li class="active aside-row flex-row-sb border-rad-02em pointer">
+                        <label for="n1" class="flex-row-gap"><span class="material-icons">dashboard</span>
+                            <p> Dashboard </p>
+                        </label>
+                    </li>
+                    <li class="no-a aside-row flex-row-sb border-rad-02em pointer">
+                        <label for="n2" class="flex-row-gap"><span class="material-icons">image</span>
+                            <p> Pages </p>
+                        </label>
+                        <select id="n2"></select>
+                    </li>
+                    <li class="no-a aside-row flex-row-sb border-rad-02em pointer">
+                        <label for="n3" class="flex-row-gap"><span class="material-icons">apps</span>
+                            <p> Components </p>
+                        </label>
+                        <select id="n3"></select>
+                    </li>
+                    <li class="no-a aside-row flex-row-sb border-rad-02em pointer">
+                        <label for="n4" class="flex-row-gap"><span class="material-icons">assignment</span>
+                            <p> Forms </p>
+                        </label>
+                        <select id="n4"></select>
+                    </li>
+                    <li class="no-a aside-row flex-row-sb border-rad-02em pointer">
+                        <label for="n5" class="flex-row-gap"><span class="material-icons">dataset</span>
+                            <p> Tables </p>
+                        </label>
+                        <select id="n5"></select>
+                    </li>
+                    <li class="no-a aside-row flex-row-sb border-rad-02em pointer">
+                        <label for="n6" class="flex-row-gap"><span class="material-icons">map</span>
+                            <p> Maps </p>
+                        </label>
+                        <select id="n6"></select>
+                    </li>
+                    <li class="no-a aside-row flex-row-sb border-rad-02em pointer">
+                        <label for="n7" class="flex-row-gap"><span class="material-icons">widgets</span>
+                            <p> Widgets </p>
+                        </label>
+                        <select id="n7"></select>
+                    </li>
+                    <li class="no-a aside-row flex-row-sb border-rad-02em pointer">
+                        <label for="n8" class="flex-row-gap"><span class="material-icons">show_chart</span>
+                            <p> Charts </p>
+                        </label>
+                        <select id="n8"></select>
+                    </li>
+                    <li class="no-a aside-row flex-row-sb border-rad-02em pointer">
+                        <label for="n9" class="flex-row-gap"><span class="material-icons">calendar_month</span>
+                            <p> Calendar </p>
+                        </label>
+                        <select id="n9"></select>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+
+    <div class="right-side flex-column-gap">
+
+        <header class="flex-row-sb">
+            <div class="header-left">
+                <span title="more" class="material-icons header-bttn box-shadow-header border-rad-50pc hide-below-1000px transiton05s tooltip">more_vert</span>
+                <span>Dashboard</span>
+            </div>
+            <span title="menu" class="show-below-1000px material-icons">menu</span>
+            <div class="header-right flex-row-gap03 hide-below-1000px">
+                <input type="text" id="srch-bar" placeholder="search...">
+                <label class="srch-bar tooltip" for="srch-bar">
+                    <span title="search" class="material-icons box-shadow-header border-rad-50pc header-bttn transiton05s">search</span>
+                </label>
+                <img class="notif-num" src="./images/number-5 (1).png">
+                <span title="dashboard" class="material-icons">dashboard</span>
+                <span>
+                    <div class="dropdown">
+                        <button title="notifications" class="material-icons ">notifications</button>
+                        <div class="content border-rad-02em">
+                            <a class="border-rad-02em" href="">John Doe sent a message</a>
+                            <a class="border-rad-02em" href="">Someone viewed your profile</a>
+                            <a class="border-rad-02em" href="">John Doe sent a message</a>
+                            <a class="border-rad-02em" href="">Someone viewed your profile</a>
+                            <a class="border-rad-02em" href="">Another message</a>
+                        </div>
+                    </div>
+                </span>
+
+                <span title="profile" class="material-icons ">person</span>
+            </div>
+        </header>
+
+        <main class="flex-column-sb">
+            <section class="s1 flex-column-gap box-shadow-all4 border-rad-02em">
+                <div class="s1-top flex-row-gap">
+                    <span class="material-icons top-icon-s1 border-rad-02em box-btm topicon-s">language</span>
+                    <h1>Global Sales by Top Locations</h1>
+                </div>
+                <div class="bottom-s1">
+                    <div class="s1-left flex-column-gap">
+                        <div class="flex-row-sb">
+                            <span class="country flex-row-gap"><img src="./images/flags/united-states.png">
+                                <p>USA</p>
+                            </span>
+                            <div class="flex-row-gap1-5em">
+                                <span>2.920</span>
+                                <span>53.23%</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="flex-row-sb">
+                            <span class="country flex-row-gap"><img src="./images/flags/germany (1).png">
+                                <p>Germany</p>
+                            </span>
+                            <div class="flex-row-gap1-5em">
+                                <span>1.300</span>
+                                <span>4.34%</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="flex-row-sb">
+                            <span class="country flex-row-gap"><img src="./images/flags/australia.png">
+                                <p>Australia</p>
+                            </span>
+                            <div class="flex-row-gap1-5em">
+                                <span>750</span>
+                                <span>20.43%</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="flex-row-sb">
+                            <span class="country flex-row-gap"><img src="./images/flags/united-kingdom (1).png">
+                                <p>United Kingdom</p>
+                            </span>
+                            <div class="flex-row-gap1-5em">
+                                <span>690</span>
+                                <span>10.35%</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="flex-row-sb">
+                            <span class="country flex-row-gap"><img src="./images/flags/romania.png">
+                                <p>Romania</p>
+                            </span>
+                            <div class="flex-row-gap1-5em">
+                                <span>600</span>
+                                <span>7.87%</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="flex-row-sb">
+                            <span class="country flex-row-gap"><img src="./images/flags/brazil.png">
+                                <p>Brazil</p>
+                            </span>
+                            <div class="flex-row-gap1-5em">
+                                <span>550</span>
+                                <span>5.94%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="s1-right">
+                        <figure>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d278876.69186753646!2d-74.22136445989719!3d40.69622918213496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1702371043650!5m2!1sen!2s"
+                                width="100%" height="225em" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <section class="s2">
+                <article class="a1 border-rad-02em box-shadow-all4">
+                    <div class="s2-article-top flex-row-sb">
+                        <span class="material-icons icon-art-1 topicon-s border-rad-02em box-btm">weekend</span>
+                        <div class="flex-column-gap ">
+                            <span class="gray fsize-1em">Bookings</span>
+                            <span class="fsize-1-7em">184</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="s2-a-bottom fsize-08em flex-row-gap03"><span
+                            class="material-icons mi-size-1-1em ">warning</span>Get more space</div>
+                </article>
+                <article class="a2 border-rad-02em box-shadow-all4">
+                    <div class="s2-article-top flex-row-sb">
+                        <span class="material-icons icon-art-2 topicon-s border-rad-02em box-btm">equalizer</span>
+                        <div class="flex-column-gap ">
+                            <span class="gray fsize-1em">Weebsite Visits</span>
+                            <span class="fsize-1-7em">75.521</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="s2-a-bottom fsize-08em flex-row-gap03"><span
+                            class="material-icons mi-size-1-1em ">sell</span>Tracked from Google Analytics</div>
+                </article>
+                <article class="a3 border-rad-02em box-shadow-all4">
+                    <div class="s2-article-top flex-row-sb">
+                        <span class="material-icons icon-art-3 topicon-s border-rad-02em box-btm">store</span>
+                        <div class="flex-column-gap ">
+                            <span class="gray fsize-1em">Revenue</span>
+                            <span class="fsize-1-7em">$34,245</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="s2-a-bottom fsize-08em flex-row-gap03"><span
+                            class="material-icons mi-size-1-1em ">date_range</span>Last 24 Hours</div>
+                </article>
+                <article class="a4 border-rad-02em box-shadow-all4">
+                    <div class="s2-article-top flex-row-sb">
+                        <span class="material-icons icon-art-4 topicon-s border-rad-02em box-btm">public</span>
+                        <div class="flex-column-gap ">
+                            <span class="gray fsize-1em">Followers</span>
+                            <span class="fsize-1-7em">+245</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="s2-a-bottom fsize-08em flex-row-gap03"><span
+                            class="material-icons mi-size-1-1em ">update</span>Just Updated</div>
+                </article>
+            </section>
+
+            <section class="s3 flex-column-gap">
+                <h1>Manage Listings</h1>
+
+                <div class="s3-display flex-row-sb">
+                    <article class="s3-a1 border-rad-02em box-shadow-all4 border-rad-05em">
+                        <div class="image-area-s3">
+                            <img class="pointer main-img-s3 border-rad-05em" src="./images/card-1.jpeg">
+                            <div class="image-options-s3">
+                                <span title="View" class="pointer material-icons gray">image</span>
+                                <span title="Edit" class="pointer material-icons green">edit</span>
+                                <span title="Delete" class="pointer material-icons red"><b>close</b></span>
+                            </div>
+                        </div>
+                        <div class="flex-column-sb">
+                            <div class="info-s3">
+                                <h3>Beautiful caslte</h3>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni esse tenetur libero
+                                    nemo
+                                    delectus
+                                    nisi! Soluta harum nesciunt, quas, illo, repellendus ducimus iste consectetur
+                                    officia
+                                    odio
+                                    earum
+                                    nobis. Voluptate, magnam.
+                                </p>
+                            </div>
+                            <hr>
+                            <div class="flex-row-sb bottom-a-s3">
+                                <span><b>$899/night</b></span>
+                                <div class="fsize-08em"><span class="material-icons">location_on</span>Barcelona,Spain
+                                </div>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <article class="s3-a2 border-rad-02em box-shadow-all4 border-rad-05em">
+                        <div class="image-area-s3">
+                            <img class="pointer main-img-s3 border-rad-05em" src="./images/card-2.jpeg">
+                            <div class="image-options-s3">
+                                <span title="View" class="pointer material-icons gray">image</span>
+                                <span title="Edit" class="pointer material-icons green">edit</span>
+                                <span title="Delete" class="pointer material-icons red"><b>close</b></span>
+                            </div>
+                        </div>
+                        <div class="flex-column-sb">
+                            <div class="info-s3">
+                                <h3>Office Studio</h3>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla eius maxime ullam
+                                    officia
+                                    natus
+                                    consectetur inventore sit cupiditate quidem error magnam modi neque magni
+                                    architecto,
+                                    eligendi
+                                    sapiente nobis ex maiores!
+                                </p>
+                            </div>
+                            <hr>
+                            <div class="flex-row-sb bottom-a-s3">
+                                <span><b>$1.119/night</b></span>
+                                <div class="fsize-08em"><span class="material-icons">location_on</span>London,UK</div>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <article class="s3-a3 border-rad-02em box-shadow-all4 border-rad-05em">
+                        <div class="image-area-s3">
+                            <img class="pointer main-img-s3 border-rad-05em" src="./images/card-3.jpeg">
+                            <div class="image-options-s3">
+                                <span title="View" class="pointer material-icons gray">image</span>
+                                <span title="Edit" class="pointer material-icons green">edit</span>
+                                <span title="Delete" class="pointer material-icons red"><b>close</b></span>
+                            </div>
+                        </div>
+                        <div class=" flex-column-sb">
+                            <div class="info-s3">
+                                <h3>Cozy 5 Star Apartment</h3>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni esse tenetur libero
+                                    nemo
+                                    delectus
+                                    nisi! Soluta harum nesciunt, quas, illo, repellendus ducimus iste consectetur
+                                    officia
+                                    odio
+                                    earum
+                                    nobis. Voluptate, magnam.
+                                </p>
+                            </div>
+                            <hr>
+                            <div class="flex-row-sb bottom-a-s3">
+                                <span><b>$459/night</b></span>
+                                <div class="fsize-08em"><span class="material-icons">location_on</span>Milan,Italy</div>
+                            </div>
+                        </div>
+
+                    </article>
+                </div>
+            </section>
+        </main>
+        <hr>
+        <footer>
+            <div class="flex-wrap-gap1em left-footer fsize-08em">
+                <span class="pointer">Home</span>
+                <span class="pointer">Company</span>
+                <span class="pointer">Portfolio</span>
+                <span class="pointer">Blog</span>
+            </div>
+            <span><i class="pointer">&copy; John Doe 2023</i></span>
+        </footer>
+    </div>
+</body>
+
+</html>
