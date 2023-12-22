@@ -32,6 +32,7 @@ main {
     margin-top: 2em;
     margin-bottom: 2em;
     transition: all 0.7s cubic-bezier(.25, .4, .45, 1.4);
+    cursor: pointer;
 }
 
 .top {
@@ -152,9 +153,13 @@ hr {
 
 .card:hover {
     transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+    transform: translateY(-5px) scale(1.005) translateZ(0);
     box-shadow: rgba(255, 0, 0, 0.856) 0px 22px 70px 4px;
 }
 
 .spc-value:hover {
     background-color: gray;
 }
+
+.card:active {
+    transform: scale(1) translateZ(0); }

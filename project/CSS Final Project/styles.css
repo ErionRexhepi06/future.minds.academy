@@ -12,6 +12,10 @@ body { background-color: var(--background-body); display: -webkit-box; display: 
 .material-icons {cursor: pointer;}
 .mi-size-1-1em {font-size: 1.1em;}
 
+.click:active { transform: scale(1) translateZ(0); }
+.click:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);}
+
 /*colors*/  :root {
     --background-body: rgba(211, 208, 208, 0.555);
     --s1-topicon: linear-gradient(40deg, rgb(114, 202, 50) 10%, rgba(0,145,0,1) 90%);
