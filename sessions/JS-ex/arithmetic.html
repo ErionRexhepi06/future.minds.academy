@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetics</title>
+</head>
+<body>
+    <input type="number" id="n1">
+    <br><br>
+    <input type="number" id="n2">
+    <br><br>
+
+    <label for="add">Additino (+)</label>
+    <input type="radio" name="equalsto" id="add" value="+">
+    <br><br>
+    <label for="subtract"> subtract (-)</label>
+    <input type="radio" name="equalsto" id="subtract" value="-">
+    <br><br>
+    <label for="multiply">Multiplication (*)</label>
+    <input type="radio" name="equalsto" id="multiply" value="*">
+    <br><br>
+
+    <button id="btn">Calculate</button>
+
+    <h4 id="results"></h4>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', () => {
+            let n1 = document.getElementById('n1').value;
+            let n2 = document.getElementById('n2').value;
+            let results = document.getElementById('results')
+
+            let sum = Number(n1) + Number(n2);
+            let multiply = Number(n1) * Number(n2);
+            let subtract = Number(n1) - Number(n2);
+
+            let calpick = document.querySelector('input [name="equalsto"]:checked')
+
+            if(calpick == "+") {
+                results.innerHTML = "Shuma eshte: " + sum;
+            }
+            else if(calpick == "-") {
+                results.innerHTML = "Zbritja eshte: " + subtract;
+            }
+
+            else {
+                results.innerHTML = "Heresi eshte: " + multiply;
+            }
+
+            console.log("Ke shkruar N1=" + n1 +" N2=" + n2);
+            console.log("Mbledhja eshte: " + sum);
+            console.log("Zbritja eshte: " + subtract)
+            console.log("Heresi eshte: " + multiply)
+        })
+    </script>
+    
+</body>
+</html>
