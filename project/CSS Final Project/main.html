@@ -7,8 +7,8 @@
     <title>Admin Dashboard</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
             <hr>
             <nav class="flex-column-sb">
                 <ul>
-                    <li class="active aside-row flex-row-sb border-rad-02em pointer click">
+                    <li class="active aside-row flex-row-sb border-rad-02em pointer">
                         <label for="n1" class="flex-row-gap"><span class="material-icons">dashboard</span>
                             <p> Dashboard </p>
                         </label>
@@ -88,14 +88,14 @@
 
         <header class="flex-row-sb">
             <div class="header-left">
-                <span title="more" class="material-icons header-bttn box-shadow-header border-rad-50pc hide-below-1000px transiton05s click">more_vert</span>
-                <span>Dashboard</span>
+                <span title="more" class="material-icons header-bttn box-shadow-header border-rad-50pc hide-below-1000px transiton05s round-bttn">more_vert</span>
+                <span style="font-size: 1.2em;">Dashboard</span>
             </div>
-            <span title="menu" class="show-below-1000px material-icons">menu</span>
+            <span title="menu" class="show-below-1000px material-icons menu-icon">menu</span>
             <div class="header-right flex-row-gap03 hide-below-1000px">
-                <input type="text" id="srch-bar" placeholder="search...">
-                <label class="srch-bar tooltip" for="srch-bar">
-                    <span title="search" class="material-icons box-shadow-header border-rad-50pc header-bttn transiton05s">search</span>
+                <input class="srch-bar" type="text" id="srch-bar" placeholder="search...">
+                <label class="srch-bar" for="srch-bar">
+                    <span style="padding: 0.3em;" title="search" class="material-icons box-shadow-header border-rad-50pc header-bttn transiton05s">search</span>
                 </label>
                 <img class="notif-num" src="./images/number-5 (1).png">
                 <span title="dashboard" class="material-icons">dashboard</span>
@@ -124,7 +124,7 @@
                 </div>
                 <div class="bottom-s1">
                     <div class="s1-left flex-column-gap">
-                        <div class="flex-row-sb">
+                        <div class="flex-row-sb s1-stats">
                             <span class="country flex-row-gap"><img src="./images/flags/united-states.png">
                                 <p>USA</p>
                             </span>
@@ -134,7 +134,7 @@
                             </div>
                         </div>
                         <hr>
-                        <div class="flex-row-sb">
+                        <div class="flex-row-sb s1-stats">
                             <span class="country flex-row-gap"><img src="./images/flags/germany (1).png">
                                 <p>Germany</p>
                             </span>
@@ -144,7 +144,7 @@
                             </div>
                         </div>
                         <hr>
-                        <div class="flex-row-sb">
+                        <div class="flex-row-sb s1-stats">
                             <span class="country flex-row-gap"><img src="./images/flags/australia.png">
                                 <p>Australia</p>
                             </span>
@@ -154,7 +154,7 @@
                             </div>
                         </div>
                         <hr>
-                        <div class="flex-row-sb">
+                        <div class="flex-row-sb s1-stats">
                             <span class="country flex-row-gap"><img src="./images/flags/united-kingdom (1).png">
                                 <p>United Kingdom</p>
                             </span>
@@ -164,7 +164,7 @@
                             </div>
                         </div>
                         <hr>
-                        <div class="flex-row-sb">
+                        <div class="flex-row-sb s1-stats">
                             <span class="country flex-row-gap"><img src="./images/flags/romania.png">
                                 <p>Romania</p>
                             </span>
@@ -174,7 +174,7 @@
                             </div>
                         </div>
                         <hr>
-                        <div class="flex-row-sb">
+                        <div class="flex-row-sb s1-stats">
                             <span class="country flex-row-gap"><img src="./images/flags/brazil.png">
                                 <p>Brazil</p>
                             </span>
@@ -276,7 +276,7 @@
                             </div>
                             <hr>
                             <div class="flex-row-sb bottom-a-s3">
-                                <span><b>$899/night</b></span>
+                                <span>$899/night</span>
                                 <div class="fsize-08em"><span class="material-icons">location_on</span>Barcelona,Spain
                                 </div>
                             </div>
@@ -287,7 +287,7 @@
                     <article class="s3-a2 border-rad-02em box-shadow-all4 border-rad-05em">
                         <div class="image-area-s3">
                             <img class="pointer main-img-s3 border-rad-05em" src="./images/card-2.jpeg">
-                            <div class="image-options-s3">
+                            <div class="image-options-s3 flex">
                                 <span title="View" class="pointer material-icons gray">image</span>
                                 <span title="Edit" class="pointer material-icons green">edit</span>
                                 <span title="Delete" class="pointer material-icons red"><b>close</b></span>
@@ -308,7 +308,7 @@
                             </div>
                             <hr>
                             <div class="flex-row-sb bottom-a-s3">
-                                <span><b>$1.119/night</b></span>
+                                <span>$1.119/night</span>
                                 <div class="fsize-08em"><span class="material-icons">location_on</span>London,UK</div>
                             </div>
                         </div>
@@ -318,7 +318,7 @@
                     <article class="s3-a3 border-rad-02em box-shadow-all4 border-rad-05em">
                         <div class="image-area-s3">
                             <img class="pointer main-img-s3 border-rad-05em" src="./images/card-3.jpeg">
-                            <div class="image-options-s3">
+                            <div class="image-options-s3 flex-row-gap">
                                 <span title="View" class="pointer material-icons gray">image</span>
                                 <span title="Edit" class="pointer material-icons green">edit</span>
                                 <span title="Delete" class="pointer material-icons red"><b>close</b></span>
@@ -340,7 +340,7 @@
                             </div>
                             <hr>
                             <div class="flex-row-sb bottom-a-s3">
-                                <span><b>$459/night</b></span>
+                                <span>$459/night</span>
                                 <div class="fsize-08em"><span class="material-icons">location_on</span>Milan,Italy</div>
                             </div>
                         </div>
