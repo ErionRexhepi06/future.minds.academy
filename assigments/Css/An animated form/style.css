@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.flex-column {display: flex; flex-direction: column;}
+.flex-column-gap2em {display: flex; flex-direction: column; gap: 2em;}
+.flex-row-sb {display: flex; flex-direction: row; justify-content: space-between;}
+
+section {
+    width: 18em;
+    height: 18em;
+    background-color: rgba(128, 128, 128, 0.438);
+    padding: 4em;
+    border-radius: 2em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+}
+
+section:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: rgba(0, 0, 0, 0.486) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.281) 0px -3px 5px;
+}
+
+button {
+    padding: 0.5em;
+    width: 6em;
+    background-color: rgb(76, 76, 245);
+    border: 2px solid rgb(45, 135, 151);
+    border-radius: 0.5em;
+    color: white;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(8, 107, 221);
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: rgba(46, 179, 240, 0.4) 0px 5px, rgba(46, 146, 240, 0.3) 0px 10px, rgba(46, 227, 240, 0.2) 0px 15px, rgba(46, 201, 240, 0.1) 0px 20px, rgba(46, 179, 240, 0.05) 0px 25px;
+}
+
+button:active {
+    transform: scale(1) translateZ(0);
+}
+
+input {
+    border-radius: 0.5em;
+    height: 1.5em;
+    border: 2px solid transparent;
+    font-size: 1em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    color: rgb(105, 102, 102);
+    font-weight: 500;
+}
+
+input:focus {
+    outline: 2px solid rgb(3, 147, 204);
+    transition: 100ms;
+}
+
+label {
+    color: rgba(78, 78, 78, 0.705);
+    font-size: 0.95em;
+    position: relative;
+    top: 1em;
+    display: block;
+    opacity: 0;
+}
+
+input:focus-within + label {
+    transition: 600ms;
+    opacity: 1;
+    position: relative;
+    top: 0.3em;
+}
+
+img {
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
