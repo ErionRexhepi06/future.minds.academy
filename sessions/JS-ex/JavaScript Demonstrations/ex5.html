@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="firstNumber" type="number" placeholder="First Number"><br><br>
+    <input id="secondNumber" type="number" placeholder="Second Number"><br><br>
+    <label>Addition (+): </label><input name="operation" type="radio" value="+" checked><br>
+    <label>Multiplication (*): </label><input name="operation" type="radio" value="*"><br><br>
+    <button id="btn">Calculate!</button>
+    <p><strong>Result is: </strong><span id="result"></span></p>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', () => {
+            let firstNumber = parseFloat(document.getElementById('firstNumber').value);
+            let secondNumber = parseFloat(document.getElementById('secondNumber').value);
+
+            if(!firstNumber || !secondNumber)
+                return;
+            
+            let operation = document.querySelector('input[name="operation"]:checked').value;
+            let resultElement = document.getElementById('result');
+            let result;
+
+            if(operation == "+")
+                result = firstNumber + secondNumber;
+            else
+                result = firstNumber * secondNumber;
+
+            resultElement.innerHTML = result;
+        });
+    </script>
+</body>
+</html>

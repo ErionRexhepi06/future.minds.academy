@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ol{
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            gap: 2rem;
+        }
+
+        li{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Add new User</button>
+    <ol id="list"></ol>
+
+    <script>
+        let button = document.getElementById('btn');
+        let list = document.getElementById('list');
+        const urlCreator = window.URL || window.webkitURL;
+
+        button.addEventListener('click', async () => {
+            let firstName = prompt('First Name?');
+            let lastName = prompt('Last Name?');
+            
+            let data;
+            const response = await fetch(`https://ui-avatars.com/api/?background=random&name=${firstName}+${lastName}`);
+            const responseBlob = await response.blob();
+
+            let imgElement = document.createElement('img');
+            imgElement.src = urlCreator.createObjectURL(responseBlob);
+            
+            let newElement = document.createElement('li');
+            newElement.innerHTML = `${firstName} ${lastName}:`;
+            newElement.appendChild(imgElement);
+            
+            list.appendChild(newElement);
+        });
+
+    </script>
+</body>
+</html>

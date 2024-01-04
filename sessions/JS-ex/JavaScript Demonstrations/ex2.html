@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            background-color: white;
+            border: 2px solid steelblue;
+            border-radius: 7px;
+            font-size: 1.5rem;
+        }
+
+        #btn:active{
+            background-color: rgb(172, 172, 172);
+        }
+
+
+    </style>
+</head>
+<body>
+    <button id="btn">Click me!</button>
+    <ol id="list"></ol>
+    
+    <script>
+        let button = document.getElementById('btn');
+        let list = document.getElementById('list');
+
+        button.addEventListener('dblclick', () => {
+            let newElement = document.createElement('li');
+            newElement.innerHTML = 'I was added';
+            list.appendChild(newElement);
+        });
+
+    </script>
+</body>
+</html>

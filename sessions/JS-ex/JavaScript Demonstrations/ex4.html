@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #game{
+            background-color: rgb(20, 20, 20);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 400px;
+            height: 400px;
+            padding: 1rem;
+        }
+
+        h1{
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        #btn{
+            background-color: steelblue;
+            color: white;
+            border: none;
+            font-size: 1.2rem;
+            margin: 1rem;
+            padding: 1rem;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game">
+        <h1>Snake Game</h1>
+        <button id="btn">Go Fullscreen</button>
+    </div>
+
+    <script>
+        let button = document.getElementById('btn');
+
+        button.addEventListener('click', ()=> {
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+                button.innerHTML = 'Go Fullscreen';
+            } else {
+                document.getElementById('game').requestFullscreen();
+                button.innerHTML = 'Exit Fullscreen';
+            }
+        });
+    </script>
+</body>
+</html>
