@@ -1,11 +1,17 @@
-h1{
-    background-color: chocolate;color: antiquewhite;
+h1 {
+    background-color: chocolate;
+    color: antiquewhite;
+    border: 1px solid gray;
 }
 
-h2{
+h2 {
     color: brown;
+    box-shadow: 2px 5px 10px rgb(109, 109, 109);
+    padding: 5px;
 }
 
-p{
-   background-color: burlywood;
+p {
+    background-color: burlywood;
+    margin-inline: auto;
+    border: 2px dashed red;
 }
