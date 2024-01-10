@@ -441,7 +441,11 @@ footer {
     justify-content: space-between;
 }
 
-.left-footer { text-transform: uppercase; font-weight: 595; font-size: 0.95em;}
+.left-footer { 
+    text-transform: uppercase;
+    font-weight: 595;
+    font-size: 0.95em;
+}
 
 @media (max-width:1000px) {
     body {
