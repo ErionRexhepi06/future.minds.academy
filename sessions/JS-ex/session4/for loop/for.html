@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for loop</title>
+    <style>
+        .mycolum5 {
+            background-color: brown;
+            color: white;
+        }
+
+        .mycolum {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table id="myFma" border="1" cellpacing="5" width="50%">
+        <tr>
+            <td>Welcome to FMA</td>
+        </tr>
+    </table>
+
+    <script>
+        let buildHtml = "";
+
+        for (let run = 1; run <= 20; run++) {
+
+            if (run == 5) {
+                buildHtml += "<tr>";
+                buildHtml += '<td class="mycolum5">';
+                buildHtml += run + ". Welcome to FMA";
+                buildHtml += "</td>";
+                buildHtml += "</tr>";
+            }
+            else {
+                buildHtml += "<tr>";
+                buildHtml += '<td class="mycolum">';
+                buildHtml += run + ". Welcome to FMA";
+                buildHtml += "</td>";
+                buildHtml += "</tr>";
+            }
+
+        }
+
+        document.getElementById("myFma").innerHTML = buildHtml
+    </script>
+</body>
+
+</html>

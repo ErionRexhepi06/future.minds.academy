@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while loop</title>
+</head>
+
+<body>
+
+    <table id="myFma" border="1" cellpacing="5" width="50%">
+        <tr>
+            <td>Welcome to FMA</td>
+        </tr>
+    </table>
+
+    <script>
+        let buildHtml = "";
+
+        let run = 1;
+        while (run <= 20) {
+            buildHtml += "<tr>";
+            buildHtml += "<td>";
+                buildHtml += run + ". Welcome to FMA";
+            buildHtml += "</td>";
+            buildHtml += "</tr>";
+            run++;
+        }
+
+        document.getElementById("myFma").innerHTML = buildHtml
+    </script>
+</body>
+
+</html>
