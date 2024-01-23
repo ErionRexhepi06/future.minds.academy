@@ -55,6 +55,7 @@ body { background-color: var(--background-body); display: -webkit-box; display: 
 /*font-size*/ .font-size-08em {font-size: 0.8em;}
               .font-size-1em {font-size: 1em;}
               .font-size-1-7em{font-size: 1.7em;}
+              .font-size-068em {font-size: 0.68em;}
 
 .topicon-s {color: white; padding: 1em; position: relative; bottom: 1.5em;}
 .top-icon-section1 {background: var(--section1-topicon);}  
@@ -109,7 +110,7 @@ aside {
 
 .aside-acc img { width: 2.5em;}
 
-.asside-acc label p {
+.aside-acc label p {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
