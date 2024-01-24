@@ -55,7 +55,6 @@ body { background-color: var(--background-body); display: -webkit-box; display: 
 /*font-size*/ .font-size-08em {font-size: 0.8em;}
               .font-size-1em {font-size: 1em;}
               .font-size-1-7em{font-size: 1.7em;}
-              .font-size-068em {font-size: 0.68em;}
 
 .topicon-s {color: white; padding: 1em; position: relative; bottom: 1.5em;}
 .top-icon-section1 {background: var(--section1-topicon);}  
@@ -184,7 +183,7 @@ aside hr {
     left: 0.4em;
 }
 
-.srch-bar {position: relative; bottom: 0.3em;}
+.search-bar {position: relative; bottom: 0.3em;}
 
 .header-right input:focus { border-bottom: 0.15em solid purple;}
 
@@ -540,6 +539,8 @@ footer {
     .show-below-1000px { display: block; }
 
     .section3, .section1, .section2 { font-size: 1.2em; }
+
+    .section2-article-bottom { font-size: 0.68em; }
 }
 
 @media (max-width:600px) {
