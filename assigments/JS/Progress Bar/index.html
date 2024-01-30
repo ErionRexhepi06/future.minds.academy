@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="progressive-bar">
+        <div>
+            <span class="indicator">0%</span>
+            <input class="user-text" type="text" placeholder="title">
+            
+            <div class="wrapper">
+                <div class="bar1" id="resizableElement1" title="Height: "></div>
+            </div>
+            <span class="indicator">100%</span>
+            <br>
+            <input class="perc-bar" type="number" id="heightInput1" name="heightInput1" min="0" max="100"
+                oninput="changeHeight('resizableElement1', this.value)">
+        </div>
+        <div>
+            <span class="indicator">0%</span>
+            <input class="user-text" type="text" placeholder="title">
+            
+            <div class="wrapper">
+                <div class="bar2" id="resizableElement2" title="Height: "></div>
+            </div>
+            <span class="indicator">100%</span>
+            <br>
+            <input class="perc-bar" type="number" id="heightInput2" name="heightInput2" min="0" max="100"
+                oninput="changeHeight('resizableElement2', this.value)">
+        </div>
+        <div>
+            <span class="indicator">0%</span>
+            <input class="user-text" type="text" placeholder="title">
+            
+            <div class="wrapper">
+                <div class="bar3" id="resizableElement3" title="Height: "></div>
+            </div>
+            <span class="indicator">100%</span>
+            <br>
+            <input class="perc-bar" type="number" id="heightInput3" name="heightInput3" min="0" max="100"
+                oninput="changeHeight('resizableElement3', this.value)">
+        </div>
+        <div>
+            <span class="indicator">0%</span>
+            <input class="user-text" type="text" placeholder="title">
+            
+            <div class="wrapper">
+                <div class="bar4" id="resizableElement4" title="Height: "></div>
+            </div>
+            <span class="indicator">100%</span>
+            <br>
+            <input class="perc-bar" type="number" id="heightInput4" name="heightInput4" min="0" max="100"
+                oninput="changeHeight('resizableElement4', this.value)">
+        </div>
+    </div>
+</body>
+
+</html>

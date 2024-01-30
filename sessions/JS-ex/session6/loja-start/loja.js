@@ -33,6 +33,4 @@ document.addEventListener("keydown",
     function (e) {
         "You pressed " + [e.key = true]
     });
-document.addEventListener("keyup", function (e) { delete e.key });
-
-if ("ArrowRight" =)
+document.addEventListener("keyup", function (e) { keyDown = {}; });

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vowels and consonants</title>
+</head>
+
+<body>
+
+    <script>
+        let vowels = 'aeiouyAEIOUY'
+        document.addEventListener('keypress', (e) => {
+            let letter = e.key
+            if ((event.key >= 'a' && event.key <= 'z') || (event.key >= 'A' && event.key <= 'Z')) {
+                if (vowels.includes(letter)) {
+                    console.log(`You pressed the vowel:${letter}`);
+                }
+                else {
+                    console.log(`You pressed the consonant ${letter}`);
+                }
+            }
+            else if (event.key >= '0' && event.key <= '9') {
+                console.log(`You pressed the number ${e.key}`);
+            }
+            else {
+                console.log(`You pressed the symbol ${e.key}`);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

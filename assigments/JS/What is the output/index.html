@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is the output?</title>
+    <style>
+        h1 {
+            background-color: aqua;
+            border: 1px solid burlywood;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            font-weight: 600;
+            font-size: 1.3em;
+        }
+
+        div{
+            background-color: burlywood;
+            border: 1px solid cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>the output for:</h1>
+
+    <div>
+        <ul>-script-
+            <li>let a = 77;</li>
+            <li>let b = 55;</li> 
+            <li>let c;</li>
+            <li>b = 44;</li> 
+            <li>c = b;</li>
+            <li>b = a;</li>
+            <li>a = c;</li>
+            <li>console.log(a)</li>
+        </ul>
+    </div>
+
+    <h1>is: 44</h1>
+</body>
+
+</html>

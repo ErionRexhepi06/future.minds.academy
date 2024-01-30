@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding-top: 5em;
+}
+
+.progressive-bar {
+    background-color: rgba(121, 121, 121, 0.212);
+    width: 70%;
+    height: 20em;
+    display: flex;
+    justify-content: space-around;
+    padding: 5%;
+    padding-bottom: 6em;
+    border-radius: 3em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+}
+
+.progressive-bar:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: rgba(0, 0, 0, 0.486) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.281) 0px -3px 5px;
+}
+
+.user-text {
+    position: relative;
+    right: 6em;
+    width: 5em;
+    rotate: 270deg;
+    top: 10em;
+    border: 2px solid rgba(105, 105, 105, 0.178);
+    border-radius: 2px;
+    font-size: 1em;
+    background-color: rgba(250, 235, 215, 0.199);
+    color: black;
+    font-weight: bold;
+}
+
+.user-text:focus {
+    outline: none;
+}
+
+.perc-bar {
+    width: 2.8em;
+    border-radius: 1em;
+    border-color: rgb(0, 0, 0);
+    margin-top: 1em;
+    padding-left: 0.3em;
+}
+
+.wrapper {
+    height: 100%;
+    width: 2.5em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    margin-bottom: 0.5em;
+}
+
+.bar1 {
+    background-color: red;
+    box-shadow: rgba(212, 12, 12, 0.808) 0px 4px 16px, rgba(218, 35, 35, 0.39) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    transition: height 0.3s ease;
+}
+
+.bar2 {
+    background-color: blue;
+    box-shadow: rgba(25, 12, 212, 0.808) 0px 4px 16px, rgba(35, 47, 218, 0.39) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    transition: height 0.3s ease;
+}
+
+.bar3 {
+    background-color: green;
+    box-shadow: rgba(35, 212, 12, 0.808) 0px 4px 16px, rgba(87, 218, 35, 0.39) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    transition: height 0.3s ease;
+}
+
+.bar4 {
+    background-color: orange;
+    box-shadow: rgba(255, 153, 1, 0.678) 0px 4px 16px, rgba(255, 188, 42, 0.205) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    transition: height 0.3s ease;
+}
+
+.indicator {
+    color: black;
+}
