@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="progressive-bar">
+        <div>
+            <span class="indicator">0%</span>
+            <div class="wrapper">
+                <div class="bar" ></div>
+            </div>
+            <span class="indicator">100%</span>
+        </div>
+
+        <div>
+            <span class="indicator">0%</span>
+            <div class="wrapper">
+                <div class="bar" ></div>
+            </div>
+            <span class="indicator">100%</span>
+        </div>
+
+        <div>
+            <span class="indicator">0%</span>
+            <div class="wrapper">
+                <div class="bar" ></div>
+            </div>
+            <span class="indicator">100%</span>
+        </div>
+
+        <div>
+            <span class="indicator">0%</span>
+            <div class="wrapper">
+                <div class="bar" ></div>
+            </div>
+            <span class="indicator">100%</span>
+        </div> 
+    </div>
+
+    <script>
+
+       for (let i = 0; i < 4; i++) {
+        let percentage = parseInt(prompt(`Enter percentage for bar ${i + 1}`));
+
+        if (isNaN(percentage) || percentage < 0 || percentage > 100) {
+            throw new Error(`Invalid percentage for bar ${i + 1}`);
+        }
+
+        let color;
+        if (percentage <= 20) {
+            color = 'darkred';
+        } else if (percentage <= 50) {
+            color = 'orange';
+        } else if (percentage <= 70) {
+            color = 'yellow';
+        } else {
+            color = 'green';
+        }
+
+        let bar = document.querySelectorAll('.bar')[i];
+        bar.style.backgroundColor = color;
+        bar.style.height = `${percentage}%`;
+        bar.setAttribute('data-tooltip', `${percentage}%`);
+    }
+    </script>
+
+</body>
+
+</html>
