@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Sequence</title>
+    <script>
+        let x = parseInt(prompt("Enter the number of Fibonacci sequence terms to generate:"));
+
+        while (isNaN(x) || x < 1) {
+            x = parseInt(prompt("Invalid input. Please enter a positive integer:"));
+        }
+
+        let fibonacciSequence = [1, 1];
+
+        for (let i = 2; i < x; i++) {
+            fibonacciSequence[i] = fibonacciSequence[i - 1] + fibonacciSequence[i - 2];
+        }
+
+        console.log(`First ${x} numbers in the Fibonacci Sequence:`);
+
+        for (let i = 0; i < x; i++) {
+            console.log(fibonacciSequence[i]);
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

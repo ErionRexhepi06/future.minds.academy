@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess until correct</title>
+</head>
+<script>
+    let guess = Math.floor(Math.random() * 6) +1 ;
+    let userInput
+    let tries = 0;
+
+    do{
+        userInput = parseInt(prompt('Guess a number from 1 to 6:'));
+        tries++;
+    }
+    while(userInput != guess) {
+        console.log(`Congratulations, you guessed the correct number in ${tries} ${tries === 1 ? 'try' : 'tries'}.`);
+    }
+</script>
+
+<body>
+
+</body>
+
+</html>

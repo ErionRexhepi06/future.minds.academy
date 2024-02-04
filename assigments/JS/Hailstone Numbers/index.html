@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hailstone Numbers</title>
+    <script>
+        let startingNumber;
+
+        do {
+            startingNumber = parseInt(prompt("Enter a positive integer to start the Hailstone sequence:"));
+        } while (startingNumber <= 0 || isNaN(startingNumber));
+
+        console.log(`Hailstone sequence starting from ${startingNumber}:`);
+
+        for (; startingNumber !== 1; startingNumber = (startingNumber % 2 === 0) ? startingNumber / 2 : startingNumber * 3 + 1) {
+            console.log(startingNumber);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

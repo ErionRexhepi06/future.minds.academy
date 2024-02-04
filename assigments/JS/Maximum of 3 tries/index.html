@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximum of 3 tries</title>
+    <script>
+        const correctPassword = '12341234';
+        let userInput;
+        let remainingTries = 3;
+
+        do {
+            userInput = prompt(`Enter the password (Attempts left: ${remainingTries}):`);
+            remainingTries--;
+
+            if (userInput === correctPassword) {
+                alert("Welcome!");
+                break;
+            } else if (remainingTries > 0) {
+                console.log(`Incorrect password. ${remainingTries} ${remainingTries === 1 ? 'try' : 'tries'} left.`);
+            } else {
+                alert("Sorry, you can't try anymore.");
+            }
+        } while (remainingTries > 0);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
