@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closest Answer Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-div flicker-in-1">
+        <h1 id="correctAnswer">The correct answer is: </h1>
+        <div class="results">
+            <div class="p1 roll-in-left" id="playerOneDiv">
+                <h4>Player One</h4><span id="playerOneGuess"></span>
+            </div>
+            <div class="p2 roll-in-left" id="playerTwoDiv">
+                <h4>Player Two</h4><span id="playerTwoGuess"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let answer = Math.floor(Math.random() * 20) + 1;
+        
+        alert('Hi! This is the "Closest Answer Game". Please write a number from 1-20')
+        let playerOne = parseInt(prompt('Player One:'));
+        let playerTwo = parseInt(prompt('Player Two:'));
+
+        if (isNaN(playerOne) || isNaN(playerTwo))
+            throw new Error('Please write only numbers!!');
+
+        if ((playerOne < 0 || playerOne > 20) ||
+            (playerTwo < 0 || playerTwo > 20)) {
+            throw new Error('Only select numbers between 0-20');
+        }
+
+        let playerOneDistance = Math.abs(answer - playerOne);
+        let playerTwoDistance = Math.abs(answer - playerTwo);
+
+        let winner, loser;
+
+        if (playerOneDistance < playerTwoDistance) {
+            winner = document.getElementById("playerOneDiv");
+            loser = document.getElementById("playerTwoDiv");
+        }
+        else if (playerOneDistance > playerTwoDistance) {
+            winner = document.getElementById("playerTwoDiv");
+            loser = document.getElementById("playerOneDiv");
+        }
+        else {
+            winner = document.getElementById("playerOneDiv");
+            loser = document.getElementById("playerTwoDiv");
+        }
+
+        document.getElementById("correctAnswer").innerText = `The correct answer is: ${answer}`;
+        document.getElementById("playerOneGuess").innerText = ` ${playerOne}`;
+        document.getElementById("playerTwoGuess").innerText = ` ${playerTwo}`;
+
+        winner.classList.add("winner");
+        loser.classList.add("loser");
+        if (playerOneDistance === playerTwoDistance) {
+            document.getElementById("playerOneDiv").classList.add("tie");
+            document.getElementById("playerTwoDiv").classList.add("tie");
+        }
+        else {
+            winner.querySelector("h4").classList.add("rotate-scale-up");
+        }
+    </script>
+</body>
+
+</html>
