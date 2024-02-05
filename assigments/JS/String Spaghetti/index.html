@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Spaghetti</title>
+    <script>
+        //1
+        let myString = "hello, dolly!";
+        let firstLetterUppercased = myString.charAt(0).toUpperCase();
+        console.log(firstLetterUppercased);
+
+        //2
+        let time = '05:36 PM';
+
+        let hours = parseInt(time.substring(0, 2), 10);
+        let minutes = parseInt(time.substring(3, 5), 10);
+        let period = time.substring(6, 8);
+
+        console.log(`Hours: ${hours}`);
+        console.log(`Minutes: ${minutes}`);
+        console.log(`AM/PM: ${period}`);
+
+        //3
+        let temp = 'New York, 15°C';
+        let commaIndex = temp.indexOf(',');
+        let gradeIndex = temp.indexOf('°');
+
+        let cityName = temp.substring(0, commaIndex).trim();
+        let temperaturePart = temp.substring(commaIndex + 1, gradeIndex);
+        let tempUnit = temp.substring(gradeIndex)
+        
+        console.log('City Name: ' + cityName);
+        console.log('Temperature: ' + temperaturePart + tempUnit);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

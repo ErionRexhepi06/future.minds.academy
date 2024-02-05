@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Exercises</title>
+    <script>
+        //1
+        function printTenTimes() {
+            for (let i = 0; i < 10; i++) {
+                console.log('Hello World');
+            }
+        } printTenTimes()
+
+        //2
+        function printString(message) {
+            console.log(message);
+        }
+        printString("I'm Erion Rexhepi!");
+
+        //3
+        function convertKilometersToMiles(kilometers) {
+            const miles = kilometers * 0.62;
+            return miles;
+        }
+        const distanceInMiles = convertKilometersToMiles(10);
+        console.log(distanceInMiles + " miles");
+
+        //4
+        function calculateCircleArea(radius) {
+            const area = Math.PI * radius * radius;
+            return area;
+        }
+        const circleArea = calculateCircleArea(5);
+        console.log("Circle area:", circleArea);
+
+        //5
+        function userWelcome(name, surname) {
+            return "Welcome, " + name + " " + surname;
+        }
+        let welcomeMessage = userWelcome('Erion', 'Rexhepi');
+        console.log(welcomeMessage);
+
+        //6
+        function isWorkingCitizen(age) {
+            return age >= 18 && age < 65;
+        }
+        const userAge = 16;
+        const isWorking = isWorkingCitizen(userAge);
+        console.log("I'm a working citizen:", isWorking);
+
+        //7
+        function isEven(number) {
+            return number % 2 === 0;
+        }
+        const checkNumber = 7;
+        console.log("Is the number " + checkNumber + " even?", isEven(checkNumber));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

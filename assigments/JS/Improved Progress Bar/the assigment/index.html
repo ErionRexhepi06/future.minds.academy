@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="progressive-bar">
+        <div>
+            <span class="indicator">0%</span>
+            <div class="wrapper">
+                <div class="bar"></div>
+            </div>
+            <span class="indicator">100%</span>
+        </div>
+
+        <div>
+            <span class="indicator">0%</span>
+            <div class="wrapper">
+                <div class="bar"></div>
+            </div>
+            <span class="indicator">100%</span>
+        </div>
+
+        <div>
+            <span class="indicator">0%</span>
+            <div class="wrapper">
+                <div class="bar"></div>
+            </div>
+            <span class="indicator">100%</span>
+        </div>
+
+        <div>
+            <span class="indicator">0%</span>
+            <div class="wrapper">
+                <div class="bar"></div>
+            </div>
+            <span class="indicator">100%</span>
+        </div>
+    </div>
+
+    <script>
+        function isValidPercentage(number) {
+            return typeof number === 'number' && number >= 0 && number <= 100;
+        }
+
+        function getProgressColor(percentage) {
+            if (percentage <= 20) {
+                return 'darkred';
+            } else if (percentage <= 50) {
+                return 'orange';
+            } else if (percentage <= 70) {
+                return 'yellow';
+            } else {
+                return 'green';
+            }
+        }
+
+        function modifyProgressBar(barElement, percentage, color) {
+            barElement.style.backgroundColor = color;
+            barElement.style.height = `${percentage}%`;
+            barElement.setAttribute('data-tooltip', `${percentage}%`);
+        }
+
+        function setProgress(barIndex, percentage) {
+            const bars = document.querySelectorAll('.bar');
+            const bar = bars[barIndex];
+            const color = getProgressColor(percentage);
+
+            modifyProgressBar(bar, percentage, color);
+        }
+
+        function updateProgressRandomly() {
+            setInterval(() => {
+                for (let i = 0; i < 4; i++) {
+                    const randomPercentage = Math.floor(Math.random() * 101);
+                    setProgress(i, randomPercentage);
+                }
+            }, 2000);
+        }
+
+        updateProgressRandomly();
+    </script>
+
+</body>
+
+</html>

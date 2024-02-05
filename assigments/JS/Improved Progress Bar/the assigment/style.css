@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding-top: 5em;
+}
+
+.progressive-bar {
+    background-color: rgba(121, 121, 121, 0.212);
+    width: 70%;
+    height: 20em;
+    display: flex;
+    justify-content: space-around;
+    padding: 5%;
+    padding-bottom: 6em;
+    border-radius: 3em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+}
+
+.progressive-bar:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: rgba(0, 0, 0, 0.486) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.281) 0px -3px 5px;
+}
+
+.wrapper {
+    height: 100%;
+    width: 2.5em;
+    box-shadow: rgba(18, 18, 26, 0.466) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    margin-bottom: 0.5em;
+    border: 2px solid rgba(0, 0, 0, 0.253);
+    border-radius: 5px;
+}
+
+.bar {
+    background-color: green;
+    height: 0%;
+    transition: height 0.3s ease;
+    border-radius: 5px;
+}
+
+.indicator {
+    color: black;
+}
+
