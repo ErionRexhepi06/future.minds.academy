@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbles</title>
+    <style>
+        body {
+            background-color: rgb(170, 154, 243);
+        }
+
+        .bubble {
+            position: fixed;
+            border-radius: 50%;
+            animation: floatAnimation 2s ease-in-out infinite;
+        }
+
+        @keyframes floatAnimation {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bubble-container"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

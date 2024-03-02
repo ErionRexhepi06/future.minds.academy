@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="searchInput" placeholder="Type your search here">
+    <button onclick="search()">Search</button>
+    <ul id="list"></ul>
+
+    <script>
+        let list = document.getElementById('list');
+
+
+        function search() {
+            let userInput = document.getElementById('searchInput').value;
+
+
+            const url = `https://hashtag5.p.rapidapi.com/api/v2.1/tag/predict?keyword=${userInput}`;
+            const options = {
+                method: 'GET',
+                headers: {
+                    'X-RapidAPI-Key': '3017973dd1msh42241d2472f26aap176fa1jsn179e25ab94d1',
+                    'X-RapidAPI-Host': 'hashtag5.p.rapidapi.com'
+                }
+            };
+
+            fetch(url, options)
+                .then((res) => res.json())
+                .then((data) => {
+                    data.tags.forEach(tag => {
+                        let li = document.createElement('div');
+                        li.textContent = '#' + tag;
+                        list.appendChild(li);
+                    })
+                });
+        }
+
+
+
+    </script>
+</body>
+
+</html>

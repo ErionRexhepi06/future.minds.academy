@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: dodgerblue;
+    color: white;
+    text-align: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+hr{
+    margin-bottom: 2rem;
+}
+
+input{
+    padding: 0.5rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border: none;
+}
+
+button{
+    padding: 0.5rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border: none;
+    background-color: rgb(127, 225, 255);
+}
+
+
+input:focus{
+    outline: none;
+}
+
+ul{
+    list-style-type: none;
+    margin-top: 1rem;
+    background-color: rgb(13, 103, 119);
+    width: 80%;
+    margin-inline: auto;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 1px white dashed;
+}
+
+li{
+    margin-bottom: 1rem;
+    border-bottom: 2px rgba(34, 116, 172, 0.986) dotted;
+    padding: 0.3em;
+    border-radius: 1em;
+}
+
+li:hover{
+    background-color: rgba(27, 183, 255, 0.623) ;
+}

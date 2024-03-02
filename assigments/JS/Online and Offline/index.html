@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline Popup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-btn">
+            <button class="button-29">home</button>
+            <button class="button-29">explore</button>
+            <button class="button-29">more</button>
+        </div>
+
+        <div class="profile">
+            <img src="account (1).png">
+            <span class="status"></span>
+        </div>
+    </header>
+
+    <section>
+        <h1>Lorem ipsum dolor</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur quod ad, eum ullam sit voluptatibus hic
+            velit inventore repellendus, nesciunt molestias, quia blanditiis temporibus! Commodi illo dignissimos magni
+            aspernatur omnis.</p>
+    </section>
+
+    <section>
+        <h1>Lorem ipsum dolor</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur quod ad, eum ullam sit voluptatibus hic
+            velit inventore repellendus, nesciunt molestias, quia blanditiis temporibus! Commodi illo dignissimos magni
+            aspernatur omnis.</p>
+    </section>
+
+    <div id="offlinePopup" class="offlinePopup">
+        <div class="popupinfo">
+            <span>You are offline, please wait until you are reconnected.</span>
+            <span><img src="no-wifi.png" alt=""></span>
+        </div>
+    </div>
+
+    <script>
+        function showOfflinePopup() {
+            const offlinePopup = document.getElementById('offlinePopup');
+            const status = document.querySelector('.status');
+            offlinePopup.style.display = 'block';
+            status.style.backgroundColor = 'rgb(95, 95, 95)'; 
+        }
+
+        function hideOfflinePopup() {
+            const offlinePopup = document.getElementById('offlinePopup');
+            offlinePopup.style.display = 'none';
+            const status = document.querySelector('.status');
+            status.style.backgroundColor = '#57af1c';
+        }
+
+        window.addEventListener('offline', function () {
+            showOfflinePopup();
+        });
+
+        window.addEventListener('online', function () {
+            hideOfflinePopup();
+        });
+    </script>
+</body>
+
+</html>

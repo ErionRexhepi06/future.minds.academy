@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Textbox</title>
+<style>
+  .custom-textbox {
+    background-color: #e6b0b0;
+    width: 300px;
+    height: 150px;
+    border: 0.5rem solid #d16f6f;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+    margin-inline: auto;
+    margin-top: 15%;
+  }
+</style>
+</head>
+<body>
+  <div id="customTextbox" class="custom-textbox" contenteditable="true"></div>
+
+<script>
+  function handleInput() {
+    let customTextbox = document.getElementById('customTextbox');
+    if (customTextbox.textContent === '') {
+      customTextbox.classList.add('placeholder');
+    } else {
+      customTextbox.classList.remove('placeholder');
+    }
+  }
+
+  function initCustomTextbox() {
+    let customTextbox = document.getElementById('customTextbox');
+    customTextbox.addEventListener('input', handleInput);
+    customTextbox.addEventListener('click', focusCustomTextbox);
+    customTextbox.textContent = 'Type here...';
+    customTextbox.classList.add('placeholder');
+  }
+
+  function focusCustomTextbox() {
+    document.getElementById('customTextbox').focus();
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    initCustomTextbox();
+  });
+</script>
+
+</body>
+</html>

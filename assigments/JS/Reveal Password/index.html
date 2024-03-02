@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Enter your password!!!</h1>
+    <div>
+        <input type="password" id="passwordInput" placeholder="Enter password">
+        <button id="showPasswordButton"></button>
+    </div>
+
+
+    <script>
+        let passwordInput = document.getElementById("passwordInput");
+        let showPasswordButton = document.getElementById("showPasswordButton");
+
+        showPasswordButton.addEventListener("click", function () {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                showPasswordButton.style.backgroundImage = "url('witness.png')";
+            } else {
+                passwordInput.type = "password";
+                showPasswordButton.style.backgroundImage = "url('hide.png')";
+            }
+        });
+    </script>
+</body>
+
+</html>
