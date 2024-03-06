@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+body{
+  background: linear-gradient(to right, #25c481, #25b7c4);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+    background-color: rgba(255, 255, 255, 0.555);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: .8em;
+}
+
+header h1 img {
+    width: 1em;
+    height: 1em;
+}
+
+.header-right img {
+    width: 2em;
+    height: 2em;
+}
+
+.header-right{
+    margin-top: 1.5em;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+}
+
+section{
+    padding: 1em;
+    margin-top: 2em;
+}
+
+.font-size1-2em{font-size: 1.2em;}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+#cartTable th:nth-child(3),
+    #cartTable td:nth-child(3) {
+        width: 1em; 
+    }

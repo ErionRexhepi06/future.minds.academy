@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+</head>
+
+<body>
+
+    <h2>Task List</h2>
+    <ul id="taskList"></ul>
+
+    <script>
+        let taskList = [];
+
+        for (var i = 0; i < 5; i++) {
+            var task = prompt("Write a task for today");
+            taskList.push(task);
+        }
+
+        let ul = document.getElementById("taskList");
+        taskList.forEach(function (task) {
+            let li = document.createElement("li");
+            li.textContent = task;
+            ul.appendChild(li);
+        });
+    </script>
+
+</body>
+
+</html>
