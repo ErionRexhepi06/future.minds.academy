@@ -23,10 +23,17 @@ body {
 table {
     margin: auto;
     border-collapse: collapse;
-    overflow-y:scroll;
-    height:7em;
-    display:block;
+    overflow: hidden;
     width: 24em;
+}
+
+tbody {
+    height: 7em;
+    overflow-y: scroll;
+    display: block;
+}
+tbody::-webkit-scrollbar {
+    display: none;
 }
 
 
