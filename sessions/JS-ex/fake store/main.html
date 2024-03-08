@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fake Store</title>
     <style>
-        *{
+        * {
             box-sizing: border-box;
             color: inherit;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
-        img{
+        img {
             max-width: 100%;
+            padding: 1em;
+            border: 1px solid black;
         }
 
-        body{
+        body {
             margin: 0;
             min-height: 100vh;
             padding: 1rem;
         }
 
-        #title{
+        #title {
             text-align: center;
         }
 
-        .products-container{
+        .products-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1rem;
         }
 
-        .product{
+        .product {
             grid-template-columns: span 1;
             grid-template-rows: span 1;
 
@@ -44,11 +47,11 @@
             transition: transform .4s ease;
         }
 
-        .product:hover{
+        .product:hover {
             transform: scale(1.05);
         }
 
-        .product-title{
+        .product-title {
             margin: 0;
             text-transform: uppercase;
             text-wrap: nowrap;
@@ -56,35 +59,44 @@
             text-overflow: ellipsis;
         }
 
-        .product-category{
+        .product-category {
             color: rgb(150, 147, 147);
             margin: 0;
         }
 
-        .product-pic{
+        .product-pic {
             aspect-ratio: 1/1;
             object-fit: contain;
             margin-block: 1rem;
         }
 
-        .product-bottom{
+        .product-bottom {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-top: auto;
         }
 
-        .product-price{
+        .product-price {
             font-size: 1.4rem;
             color: crimson;
         }
 
-        .product-rating{
+        .product-rating {
             color: grey;
             font-size: 1.1rem;
         }
+
+        .product.expanded {
+            width: 400px;
+            /* Adjust the expanded width as needed */
+            height: 400px;
+            /* Adjust the expanded height as needed */
+            transition: width 0.4s ease, height 0.4s ease;
+        }
     </style>
 </head>
+
 <body>
     <h1 id="title">AMAZON</h1>
 
@@ -111,7 +123,7 @@
 
                 console.log(averagePrice);
 
-                
+
 
                 products = products.sort((a, b) => {
                     return b.price - a.price;
@@ -122,10 +134,11 @@
                     productsContainer.appendChild(card);
                 });
             });
-        
-        function createProductCard(product){
+
+        function createProductCard(product) {
             let productEl = document.createElement('article');
             productEl.classList.add('product');
+            productEl.dataset.productId = product.id; // Add data-product-id attribute
 
             //title
             let productTitle = document.createElement('h3');
@@ -136,6 +149,10 @@
             let productCategory = document.createElement('p');
             productCategory.classList.add('product-category');
             productCategory.textContent = product.category;
+
+            //figure
+            let figure = document.createElement('figure');
+            figure.classList.add('figure-box');
 
             //img
             let productImage = document.createElement('img');
@@ -158,10 +175,11 @@
 
             bottom.appendChild(productPrice);
             bottom.appendChild(productRating);
+            figure.appendChild(productImage);
 
             productEl.appendChild(productTitle);
             productEl.appendChild(productCategory);
-            productEl.appendChild(productImage);
+            productEl.appendChild(figure);
             productEl.appendChild(bottom);
 
             productEl.addEventListener('click', () => {
@@ -171,14 +189,17 @@
             return productEl;
         }
 
-        function expandProduct(product){
-            console.log(product)
+
+        function expandProduct(product) {
+            let productCard = document.querySelector(`[data-product-id="${product.id}"]`);
+            productCard.classList.toggle('expanded');
         }
 
-        function collapseProduct(){
+        function collapseProduct() {
 
         }
 
     </script>
 </body>
+
 </html>
