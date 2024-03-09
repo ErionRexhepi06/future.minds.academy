@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,7 +59,6 @@
         }
     </style>
 </head>
-
 <body>
     <div class="container">
         <h1>Birthday Facts</h1>
@@ -79,40 +77,44 @@
             const factsDiv = document.getElementById('facts');
             factsDiv.innerHTML = ''; // Clear previous facts
 
+            const month = birthdate.split('-')[1];
+            const day = birthdate.split('-')[2];
+
+            const urlBase = 'https://numbersapi.p.rapidapi.com';
+            const headers = {
+                'X-RapidAPI-Key': '3017973dd1msh42241d2472f26aap176fa1jsn179e25ab94d1',
+                'X-RapidAPI-Host': 'numbersapi.p.rapidapi.com'
+            };
+
             try {
-                const response1 = await fetch(`https://numbersapi.p.rapidapi.com/${birthdate}/date?json=true`, {
-                    method: 'GET',
-                    headers: {
-                        'X-RapidAPI-Key': 'YOUR_RAPIDAPI_KEY',
-                        'X-RapidAPI-Host': 'numbersapi.p.rapidapi.com'
-                    }
-                });
-                const response2 = await fetch(`https://numbersapi.p.rapidapi.com/${birthdate}/math?json=true`, {
-                    method: 'GET',
-                    headers: {
-                        'X-RapidAPI-Key': 'YOUR_RAPIDAPI_KEY',
-                        'X-RapidAPI-Host': 'numbersapi.p.rapidapi.com'
-                    }
-                });
-                const response3 = await fetch(`https://numbersapi.p.rapidapi.com/${birthdate}/trivia?json=true`, {
-                    method: 'GET',
-                    headers: {
-                        'X-RapidAPI-Key': 'YOUR_RAPIDAPI_KEY',
-                        'X-RapidAPI-Host': 'numbersapi.p.rapidapi.com'
-                    }
-                });
+                const responses = await Promise.all([
+                    fetch(`${urlBase}/${month}/${day}/date?json=true`, { method: 'GET', headers }),
+                    delay(1000).then(() => fetch(`${urlBase}/${month}/${day}/math?json=true`, { method: 'GET', headers })),
+                    delay(2000).then(() => fetch(`${urlBase}/${month}/${day}/trivia?json=true`, { method: 'GET', headers }))
+                ]);
 
-                const [fact1, fact2, fact3] = await Promise.all([response1.json(), response2.json(), response3.json()]);
+                const facts = await Promise.all(responses.map(async (response) => {
+                    const data = await response.json();
+                    return data.text;
+                }));
 
-                factsDiv.innerHTML += `<div class="fact">${fact1.text}</div>`;
-                factsDiv.innerHTML += `<div class="fact">${fact2.text}</div>`;
-                factsDiv.innerHTML += `<div class="fact">${fact3.text}</div>`;
+                facts.forEach(fact => {
+                    if (fact) {
+                        factsDiv.innerHTML += `<div class="fact">${fact}</div>`;
+                    }
+                });
             } catch (error) {
                 alert('An error occurred while fetching data. Please try again later.');
                 console.error(error);
             }
         });
+
+        function delay(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+
+        //im getting only one fact, i tried many ways but couldnt find solution.
     </script>
 </body>
-
 </html>
