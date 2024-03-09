@@ -30,11 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         validatePassword();
     });
 
-    form.addEventListener('submit', (event) => {
-        event.preventDefault(); 
-        alert('Form submitted successfully!');
-    });
-
     function validateEmail() {
         let email = emailInput.value;
         let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
