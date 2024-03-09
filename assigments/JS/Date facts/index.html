@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .fact {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Birthday Facts</h1>
+        <form id="birthdayForm">
+            <label for="birthdate">Enter your birthdate:</label>
+            <input type="date" id="birthdate" required>
+            <button type="submit">Get Facts</button>
+        </form>
+        <div id="facts"></div>
+    </div>
+
+    <script>
+        document.getElementById('birthdayForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const birthdate = document.getElementById('birthdate').value;
+            const factsDiv = document.getElementById('facts');
+            factsDiv.innerHTML = ''; // Clear previous facts
+
+            try {
+                const response1 = await fetch(`https://numbersapi.p.rapidapi.com/${birthdate}/date?json=true`, {
+                    method: 'GET',
+                    headers: {
+                        'X-RapidAPI-Key': 'YOUR_RAPIDAPI_KEY',
+                        'X-RapidAPI-Host': 'numbersapi.p.rapidapi.com'
+                    }
+                });
+                const response2 = await fetch(`https://numbersapi.p.rapidapi.com/${birthdate}/math?json=true`, {
+                    method: 'GET',
+                    headers: {
+                        'X-RapidAPI-Key': 'YOUR_RAPIDAPI_KEY',
+                        'X-RapidAPI-Host': 'numbersapi.p.rapidapi.com'
+                    }
+                });
+                const response3 = await fetch(`https://numbersapi.p.rapidapi.com/${birthdate}/trivia?json=true`, {
+                    method: 'GET',
+                    headers: {
+                        'X-RapidAPI-Key': 'YOUR_RAPIDAPI_KEY',
+                        'X-RapidAPI-Host': 'numbersapi.p.rapidapi.com'
+                    }
+                });
+
+                const [fact1, fact2, fact3] = await Promise.all([response1.json(), response2.json(), response3.json()]);
+
+                factsDiv.innerHTML += `<div class="fact">${fact1.text}</div>`;
+                factsDiv.innerHTML += `<div class="fact">${fact2.text}</div>`;
+                factsDiv.innerHTML += `<div class="fact">${fact3.text}</div>`;
+            } catch (error) {
+                alert('An error occurred while fetching data. Please try again later.');
+                console.error(error);
+            }
+        });
+    </script>
+</body>
+
+</html>
