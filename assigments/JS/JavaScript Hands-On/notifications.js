@@ -1,37 +1,43 @@
-
 function startNotification(text) {
-  let originalTitle = document.title;
-  let originalFavicon = document.querySelector('link[rel="icon"]').href;
+  localStorage.setItem('originalTitle', document.title);
+  localStorage.setItem('originalFavicon', getFavicon());
 
-  let isNotificationActive = true;
+  // Change the favicon to bell.ico
+  setFavicon('bell.ico');
+
   let interval = setInterval(() => {
+      let isNotificationActive = localStorage.getItem('isNotificationActive') === 'true';
       if (isNotificationActive) {
           document.title = text;
-          document.querySelector('link[rel="icon"]').href = 'bell.png';
+          setFavicon('bell.ico');
       } else {
-          document.title = originalTitle;
-          document.querySelector('link[rel="icon"]').href = originalFavicon;
+          document.title = localStorage.getItem('originalTitle');
+          setFavicon(localStorage.getItem('originalFavicon'));
       }
-      isNotificationActive = !isNotificationActive;
+      localStorage.setItem('isNotificationActive', !isNotificationActive);
   }, 1000);
 
   localStorage.setItem('notificationInterval', interval.toString());
 }
 
 
-let endNotification = () => {
+
+function endNotification() {
   let interval = localStorage.getItem('notificationInterval');
   clearInterval(parseInt(interval));
+
+  let originalTitle = localStorage.getItem('originalTitle');
+  let originalFavicon = localStorage.getItem('originalFavicon');
   document.title = originalTitle;
   setFavicon(originalFavicon);
-};
+}
 
-let getFavicon = () => {
+function getFavicon() {
   let favicon = document.querySelector('link[rel="icon"]');
-  return favicon ? favicon.getAttribute('href') : 'default.png';
-};
+  return favicon ? favicon.getAttribute('href') : 'default.ico';
+}
 
-let setFavicon = (icon) => {
+function setFavicon(icon) {
   let favicon = document.querySelector('link[rel="icon"]');
   if (favicon) {
       favicon.setAttribute('href', icon);
@@ -41,4 +47,4 @@ let setFavicon = (icon) => {
       newFavicon.href = icon;
       document.head.appendChild(newFavicon);
   }
-};
+}
