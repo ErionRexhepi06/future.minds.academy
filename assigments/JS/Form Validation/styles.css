@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.font-weight{font-weight: bold; }
+
+body {
+    background-color: #250057;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 5px;
+    padding: 1em 2em;
+    margin: 5em auto;
+}
+
+.passwordForm{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+form {
+    margin-top: 1em;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.pw-box {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.pw-box input, .email {
+    width: calc(100% - 2.5em); 
+    padding: .5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1em;
+}
+
+.pw-box img {
+    width: 2em;
+    cursor: pointer;
+    position: relative;
+    right: 2.4em;
+}
+
+#requirements p {
+    margin-bottom: 0.5em;
+}
+
+.valid {
+    color: green; 
+}
+
+.invalid {
+    color: red;
+}
+
+#submitBtn {
+    margin-top: 1em;
+    padding: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#submitBtn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
