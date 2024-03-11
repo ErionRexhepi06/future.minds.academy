@@ -71,6 +71,7 @@
         input:checked+.slider:before {
             transform: translateX(30px);
         }
+
         body.dark-mode {
             background-color: #333;
             color: #fff;
@@ -99,7 +100,7 @@
         <div class="dark-mode-toggle">
             <input type="checkbox" id="darkModeToggle">
             <label for="darkModeToggle" class="slider"></label>
-            <label for="darkModeToggle">Dark Mode</label>
+            <label for="darkModeToggle" id="dlMode">Light Mode</label>
         </div>
         <h1>Welcome to My Website</h1>
         <p>This is a simple website with dark/light mode toggle feature.</p>
@@ -123,15 +124,18 @@
         if (isDarkMode) {
             document.body.classList.add('dark-mode');
             darkModeToggle.checked = true;
+            document.getElementById('dlMode').textContent = 'Dark Mode';
         }
 
         darkModeToggle.addEventListener('change', () => {
             if (darkModeToggle.checked) {
                 document.body.classList.add('dark-mode');
                 localStorage.setItem('darkMode', true);
+                document.getElementById('dlMode').textContent = 'Dark Mode';
             } else {
                 document.body.classList.remove('dark-mode');
                 localStorage.removeItem('darkMode');
+                document.getElementById('dlMode').textContent = 'Light Mode';
             }
         });
     </script>
