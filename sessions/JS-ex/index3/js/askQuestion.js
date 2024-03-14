@@ -1,0 +1,1 @@
+export let userAns = prompt("whats your name?");

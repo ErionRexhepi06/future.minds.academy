@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sidebar Example</title>
+<style>
+  /* Basic styling for the sidebar */
+  .sidebar {
+    width: 200px;
+    background-color: #f0f0f0;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+  }
+
+  /* Styling for the list item */
+  .aside-row {
+    display: flex;
+    align-items: center; /* Align items vertically center */
+    cursor: pointer;
+    position: relative; /* Positioning for the submenu */
+  }
+
+  /* Additional styling for the div container within the list item */
+  .aside-row div {
+    display: flex;
+    align-items: center; /* Align items vertically center */
+  }
+
+  /* Adjusting margin between icon and text */
+  .aside-row div span + span {
+    margin-left: 5px;
+  }
+
+  /* Styling for the submenu */
+  .sub-nav {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position the submenu below the main div */
+    left: 0;
+    background-color: #fff; /* Adjust background color */
+    border: 1px solid #ccc; /* Add border */
+    z-index: 1; /* Ensure the submenu appears above other content */
+    padding: 5px;
+    border-radius: 0.2em; /* Add border radius */
+  }
+</style>
+</head>
+<body>
+<!-- Sidebar -->
+<nav class="flex-column-sb">
+    <ul>
+        <!-- List items -->
+        <li class="active aside-row flex-row-sb border-rad-02em pointer" onclick="toggleSubNav(this)">
+            <div>
+                <span class="material-icons">dashboard</span>
+                <span id="goingToHide">Dashboard</span>
+            </div>
+            <span class="material-icons">arrow_drop_down</span>
+            <!-- Submenu -->
+            <div class="sub-nav">
+                <div><span class="sub-nav-el">P</span>Pricing</div>
+                <div><span class="sub-nav-el">RS</span>RTL Support</div>
+                <div><span class="sub-nav-el">T</span>Timeline</div>
+                <div><span class="sub-nav-el">LP</span>Login Page</div>
+            </div>
+        </li>
+
+        <li class="active aside-row flex-row-sb border-rad-02em pointer" onclick="toggleSubNav(this)">
+          <div>
+              <span class="material-icons">dashboard</span>
+              <span id="goingToHide">Dashboard</span>
+          </div>
+          <span class="material-icons">arrow_drop_down</span>
+          <!-- Submenu -->
+          <div class="sub-nav">
+              <div><span class="sub-nav-el">P</span>Pricing</div>
+              <div><span class="sub-nav-el">RS</span>RTL Support</div>
+              <div><span class="sub-nav-el">T</span>Timeline</div>
+              <div><span class="sub-nav-el">LP</span>Login Page</div>
+          </div>
+      </li>
+        <!-- Other list items -->
+        <!-- Add other list items similarly -->
+    </ul>
+</nav>
+
+<script>
+  // JavaScript to toggle submenu visibility when the main div is clicked
+  function toggleSubNav(element) {
+    var subNav = element.querySelector('.sub-nav');
+    if (subNav) {
+      subNav.style.display = (subNav.style.display === 'block') ? 'none' : 'block';
+    }
+  }
+</script>
+
+</body>
+</html>

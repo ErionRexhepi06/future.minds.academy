@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+
+<body>
+    
+    <span title="settings" class="material-icons settings-under1000px show-below-1000px">settings</span>
+
+    <div class="left-side" id="leftSide">
+        <aside class="hide-below-1000px sidebar">
+            <div class="top-aside flex-row-gap1em"><span>CP</span> <span id="goingToHide" class="transiton05s">COOL PAGE</span></div>
+            <hr>
+            <div class="aside-acc aside-row flex-row-sb">
+                <div class="flex-row-gap"><img class="border-rad-50pc pointer" src="./images/avatar.jpg">
+                    <p id="goingToHide" class="transiton05s">John Doe</p>
+                </div>
+                <span class="material-icons" id="goingToHide">arrow_drop_down</span>
+            </div>
+
+            <hr>
+            <nav class="flex-column-sb">
+                <ul>
+                    <li class="active aside-row flex-row-sb border-rad-02em pointer">
+                        <div>
+                            <span class="material-icons main-nav-icon">dashboard</span>
+                            <span id="goingToHide">Dashboard</span>
+                        </div>
+                        <span class="material-icons">arrow_drop_down</span>
+                    </li>
+
+                    <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
+                        <div class="main-nav flex-row-sb">
+                            <div>
+                                <span class="material-icons main-nav-icon">image</span>
+                                <span id="goingToHide">Pages</span>
+                            </div>
+                            <span class="material-icons arrow-drop-down">arrow_drop_down</span>
+                        </div>
+                    
+                        <div class="sub-nav" style="display: none;">
+                            <div><span class="sub-nav-el">P</span>Pricing</div>
+                            <div><span class="sub-nav-el">RS</span>RTL Support</div>
+                            <div><span class="sub-nav-el">T</span>Timeline</div>
+                            <div><span class="sub-nav-el">LP</span>Login Page</div>
+                        </div>
+                    </li>
+                    
+
+                    <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
+                        <div class="main-nav flex-row-sb">
+                            <div>
+                                <span class="material-icons main-nav-icon">apps</span>
+                                <span id="goingToHide">Components</span>
+                            </div>
+                            <span class="material-icons arrow-drop-down">arrow_drop_down</span>
+                        </div>
+
+                        <div class="sub-nav" style="display: none;">
+                            <div><span class="sub-nav-el">B</span>Buttons</div>
+                            <div><span class="sub-nav-el">GS</span>Grid System</div>
+                            <div><span class="sub-nav-el">P</span>Panels</div>
+                        </div>
+                    </li>
+
+                    <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
+                        <div class="main-nav flex-row-sb">
+                            <div>
+                                <span class="material-icons main-nav-icon">assignment</span>
+                                <span id="goingToHide">Forms</span>
+                            </div>
+                            <span class="material-icons arrow-drop-down">arrow_drop_down</span>
+                        </div>
+
+                        <div class="sub-nav" style="display: none;">
+                            <div><span class="sub-nav-el">RF</span>Regular Forms</div>
+                            <div><span class="sub-nav-el">EF</span>Extended Forms</div>
+                        </div>
+                    </li>
+
+                    <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
+                        <div class="main-nav flex-row-sb">
+                            <div>
+                                <span class="material-icons main-nav-icon">dataset</span>
+                                <span id="goingToHide">Tables</span>
+                            </div>
+                            <span class="material-icons arrow-drop-down">arrow_drop_down</span>
+                        </div>
+
+                        <div class="sub-nav" style="display: none;">
+                            <div><span class="sub-nav-el">T1</span>Tabel 1</div>
+                            <div><span class="sub-nav-el">T2</span>Tabel 2</div>
+                        </div>
+                    </li>
+
+                    <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
+                        <div class="main-nav flex-row-sb">
+                            <div>
+                                <span class="material-icons main-nav-icon">map</span>
+                                <span id="goingToHide">Maps</span>
+                            </div>
+                            <span class="material-icons arrow-drop-down">arrow_drop_down</span>
+                        </div>
+
+                        <div class="sub-nav" style="display: none;">
+                            <div><span class="sub-nav-el">M1</span>Map 1</div>
+                            <div><span class="sub-nav-el">M2</span>Map 2</div>
+                        </div>
+                    </li>
+
+                    <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
+                        <div class="main-nav flex-row-sb">
+                            <div>
+                                <span class="material-icons main-nav-icon">widgets</span>
+                                <span id="goingToHide">Widgets</span>
+                            </div>
+                            <span class="material-icons arrow-drop-down">arrow_drop_down</span>
+                        </div>
+
+                        <div class="sub-nav" style="display: none;">
+                            <div><span class="sub-nav-el">W1</span>Widget 1</div>
+                            <div><span class="sub-nav-el">W2</span>Widget 2</div>
+                        </div>
+                    </li>
+
+                    <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
+                        <div class="main-nav flex-row-sb">
+                            <div>
+                                <span class="material-icons main-nav-icon">show_chart</span>
+                                <span id="goingToHide">Charts</span>
+                            </div>
+                            <span class="material-icons arrow-drop-down">arrow_drop_down</span>
+                        </div>
+
+                        <div class="sub-nav" style="display: none;">
+                            <div><span class="sub-nav-el">CT1</span>Chart Type 1</div>
+                            <div><span class="sub-nav-el">CT2</span>Chart Type 2</div>
+                        </div>
+                    </li>
+
+                    <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
+                        <div class="main-nav flex-row-sb">
+                            <div>
+                                <span class="material-icons main-nav-icon">calendar_month</span>
+                                <span id="goingToHide">Calendar</span>
+                            </div>
+                            <span class="material-icons arrow-drop-down">arrow_drop_down</span>
+                        </div>
+
+                        <div class="sub-nav" style="display: none;">
+                            <div><span class="sub-nav-el">C1</span>Calendar 1</div>
+                            <div><span class="sub-nav-el">C2</span>Calendar 2</div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+
+    <div class="right-side flex-column-gap">
+
+        <header class="flex-row-sb">
+            <div class="header-left">
+                <span title="more"
+                    class="material-icons header-bttn box-shadow-header border-rad-50pc hide-below-1000px transiton05s round-bttn"
+                    id="sidebarBtn">more_vert</span>
+                <span style="font-size: 1.2em;">Dashboard</span>
+            </div>
+            <span title="menu" id="menuIcon" class="show-below-1000px material-icons menu-icon">menu</span>
+            <div class="header-right flex-row-gap03 hide-below-1000px">
+                <input class="search-bar" type="text" id="search-bar" placeholder="search...">
+                <label class="search-bar" for="search-bar">
+                    <span style="padding: 0.3em;" title="search"
+                        class="material-icons box-shadow-header border-rad-50pc header-bttn transiton05s">search</span>
+                </label>
+                <span class="notification-number cursor-pointer" id="notificationNumber"></span>
+                <span title="dashboard" class="material-icons">dashboard</span>
+                <span>
+                    <div class="dropdown" id="dropdown">
+                        <button title="notifications" class="material-icons">notifications</button>
+                        <div class="content border-rad-02em" id="dropdownContent">
+                        </div>
+                    </div>
+                </span>
+
+                <span title="profile" class="material-icons ">person</span>
+                <span title="settings" class="material-icons settings">settings</span>
+            </div>
+        </header>
+
+        <main class="flex-column-sb">
+            <section class="section1 flex-column-gap box-shadow-all4 border-rad-02em">
+                <div class="section1-top flex-row-gap">
+                    <span class="material-icons top-icon-section1 border-rad-02em box-bottom topicon-s">language</span>
+                    <h1>Global Sales by Top Locations</h1>
+                </div>
+                <div class="bottom-section1">
+                    <table class="section1-left">
+                        <tr>
+                            <td><img src="./images/flags/united-states.png"></td>
+                            <td>USA</td>
+                            <td>2.920</td>
+                            <td>53.23%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./images/flags/germany (1).png"></td>
+                            <td>Germany</td>
+                            <td>1.300</td>
+                            <td>4.34%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./images/flags/australia.png"></td>
+                            <td>Austarlia</td>
+                            <td>750</td>
+                            <td>20.43%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./images/flags/united-kingdom (1).png"></td>
+                            <td>United Kingdom</td>
+                            <td>690</td>
+                            <td>10.35%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./images/flags/romania.png"></td>
+                            <td>Romania</td>
+                            <td>600</td>
+                            <td>7.87%</td>
+                        </tr>
+                        <tr class="last-tr">
+                            <td><img src="./images/flags/brazil.png"></td>
+                            <td>Brazil</td>
+                            <td>550</td>
+                            <td>5.94%</td>
+                        </tr>
+                    </table>
+
+                    <div class="section1-right">
+                        <figure>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d278876.69186753646!2d-74.22136445989719!3d40.69622918213496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1702371043650!5m2!1sen!2s"
+                                width="100%" height="300em" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section2">
+                <article class="article1 border-rad-02em box-shadow-all4">
+                    <div class="section2-article-top flex-row-sb">
+                        <span class="material-icons icon-art-1 topicon-s border-rad-02em box-bottom">weekend</span>
+                        <div class="flex-column-gap ">
+                            <span class="gray font-size-1em">Bookings</span>
+                            <span class="font-size-1-7em">184</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="section2-article-bottom  flex-row-gap03 font-size-08em"><span
+                            class="material-icons material-icon-size1-1em ">warning</span>Get more space</div>
+                </article>
+                <article class="article2 border-rad-02em box-shadow-all4">
+                    <div class="section2-article-top flex-row-sb">
+                        <span class="material-icons icon-art-2 topicon-s border-rad-02em box-bottom">equalizer</span>
+                        <div class="flex-column-gap ">
+                            <span class="gray font-size-1em">Weebsite Visits</span>
+                            <span class="font-size-1-7em">75.521</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="section2-article-bottom  flex-row-gap03 font-size-08em"><span
+                            class="material-icons material-icon-size1-1em ">sell</span>Tracked from Google Analytics
+                    </div>
+                </article>
+                <article class="article3 border-rad-02em box-shadow-all4">
+                    <div class="section2-article-top flex-row-sb">
+                        <span class="material-icons icon-art-3 topicon-s border-rad-02em box-bottom">store</span>
+                        <div class="flex-column-gap ">
+                            <span class="gray font-size-1em">Revenue</span>
+                            <span class="font-size-1-7em">$34,245</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="section2-article-bottom  flex-row-gap03 font-size-08em"><span
+                            class="material-icons material-icon-size1-1em ">date_range</span>Last 24 Hours</div>
+                </article>
+                <article class="article4 border-rad-02em box-shadow-all4">
+                    <div class="section2-article-top flex-row-sb">
+                        <span class="material-icons icon-art-4 topicon-s border-rad-02em box-bottom">public</span>
+                        <div class="flex-column-gap ">
+                            <span class="gray font-size-1em">Followers</span>
+                            <span class="font-size-1-7em">+245</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="section2-article-bottom  flex-row-gap03  font-size-08em"><span
+                            class="material-icons material-icon-size1-1em ">update</span>Just Updated</div>
+                </article>
+            </section>
+
+            <section class="section3 flex-column-gap">
+                <h1>Manage Listings</h1>
+
+                <div class="section3-display flex-row-sb">
+                    <article class="section3-article1 border-rad-02em box-shadow-all4 border-rad-05em">
+                        <div class="image-area-section3">
+                            <img class="pointer main-img-section3 border-rad-05em" src="./images/card-1.jpeg">
+                            <div class="image-options-section3 flex-row-gap">
+                                <span title="View" class="pointer material-icons gray">image</span>
+                                <span title="Edit" class="pointer material-icons green">edit</span>
+                                <span title="Delete" class="pointer material-icons red"><b>close</b></span>
+                            </div>
+                        </div>
+                        <div class="flex-column-sb">
+                            <div class="info-section3">
+                                <h3>Beautiful caslte</h3>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni esse tenetur libero
+                                    nemo
+                                    delectus
+                                    nisi! Soluta harum nesciunt, quas, illo, repellendus ducimus iste consectetur
+                                    officia
+                                    odio
+                                    earum
+                                    nobis. Voluptate, magnam.
+                                </p>
+                            </div>
+                            <hr>
+                            <div class="flex-row-sb bottom-article-section3">
+                                <span>$899/night</span>
+                                <div class="font-size-08em"><span
+                                        class="material-icons">location_on</span>Barcelona,Spain
+                                </div>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <article class="section3-article2 border-rad-02em box-shadow-all4 border-rad-05em">
+                        <div class="image-area-section3">
+                            <img class="pointer main-img-section3 border-rad-05em" src="./images/card-2.jpeg">
+                            <div class="image-options-section3 flex-row-gap">
+                                <span title="View" class="pointer material-icons gray">image</span>
+                                <span title="Edit" class="pointer material-icons green">edit</span>
+                                <span title="Delete" class="pointer material-icons red"><b>close</b></span>
+                            </div>
+                        </div>
+                        <div class="flex-column-sb">
+                            <div class="info-section3">
+                                <h3>Office Studio</h3>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla eius maxime ullam
+                                    officia
+                                    natus
+                                    consectetur inventore sit cupiditate quidem error magnam modi neque magni
+                                    architecto,
+                                    eligendi
+                                    sapiente nobis ex maiores!
+                                </p>
+                            </div>
+                            <hr>
+                            <div class="flex-row-sb bottom-article-section3">
+                                <span>$1.119/night</span>
+                                <div class="font-size-08em"><span class="material-icons">location_on</span>London,UK
+                                </div>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <article class="section3-article3 border-rad-02em box-shadow-all4 border-rad-05em">
+                        <div class="image-area-section3">
+                            <img class="pointer main-img-section3 border-rad-05em" src="./images/card-3.jpeg">
+                            <div class="image-options-section3 flex-row-gap">
+                                <span title="View" class="pointer material-icons gray">image</span>
+                                <span title="Edit" class="pointer material-icons green">edit</span>
+                                <span title="Delete" class="pointer material-icons red"><b>close</b></span>
+                            </div>
+                        </div>
+                        <div class=" flex-column-sb">
+                            <div class="info-section3">
+                                <h3>Cozy 5 Star Apartment</h3>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni esse tenetur libero
+                                    nemo
+                                    delectus
+                                    nisi! Soluta harum nesciunt, quas, illo, repellendus ducimus iste consectetur
+                                    officia
+                                    odio
+                                    earum
+                                    nobis. Voluptate, magnam.
+                                </p>
+                            </div>
+                            <hr>
+                            <div class="flex-row-sb bottom-article-section3">
+                                <span>$459/night</span>
+                                <div class="font-size-08em"><span class="material-icons">location_on</span>Milan,Italy
+                                </div>
+                            </div>
+                        </div>
+
+                    </article>
+                </div>
+            </section>
+        </main>
+        <hr>
+        <footer>
+            <div class="flex-wrap-gap1em left-footer font-size-08em">
+                <span class="pointer">Home</span>
+                <span class="pointer">Company</span>
+                <span class="pointer">Portfolio</span>
+                <span class="pointer">Blog</span>
+            </div>
+            <span><i class="pointer">&copy; John Doe 2023</i></span>
+        </footer>
+    </div>
+
+    <script src="./js/arrays.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
