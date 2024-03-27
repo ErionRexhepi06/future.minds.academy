@@ -12,167 +12,211 @@
 </head>
 
 <body>
-    
-    <span title="settings" class="material-icons settings-under1000px show-below-1000px">settings</span>
+
+    <span title="settings" class="material-icons settings-under1000px show-below-1000px pointer"
+        id="settingsButtonBelow1000">settings</span>
+
+    <!-- Settings-page -->
+    <div class="settings-window">
+        <div class="settingsContent">
+            <span class="close-button pointer" id="closeSettingsButton">&times;</span>
+            <div class="settings-options flex-column-sb">
+                <div class="sidebar-filters">
+                    <h4>Sidebar Filters</h4>
+                    <div class="sb-filters-box flex-row-sb"></div>
+                </div>
+                <hr class="hr-settings">
+                <div class="sidebar-bcg" style="margin-top: 1em;">
+                    <h4>Sidebar Background</h4>
+                    <div style="margin-top: .6em;"><label for="enable-background" style="color: gray; font-size: 90%;">enable this function?</label><input id="enable-background" type="checkbox"></div>
+                    <div class="sb-background flex-row-sb"></div>
+                </div>
+                <hr class="hr-settings">
+                <div class="sidebar-img-input flex-row-sb" style="margin-top: 1em;">
+                    <h4>Disable Sidebar Image?</h4>
+                    <label class="toggle-switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <hr class="hr-settings">
+                <div class="sidebar-photo" style="margin-top: 1em;">
+                    <h4>Sidebar image select</h4>
+                    <div class="bcg-photo-box" style="display: flex; flex-wrap: wrap; gap: 1em;"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <div class="left-side" id="leftSide">
         <aside class="hide-below-1000px sidebar">
-            <div class="top-aside flex-row-gap1em"><span>CP</span> <span id="goingToHide" class="transiton05s">COOL PAGE</span></div>
-            <hr>
-            <div class="aside-acc aside-row flex-row-sb">
-                <div class="flex-row-gap"><img class="border-rad-50pc pointer" src="./images/avatar.jpg">
-                    <p id="goingToHide" class="transiton05s">John Doe</p>
+            <div class="aside-wrap">
+                <div class="top-aside flex-row-gap1em"><span>CP</span> <span id="goingToHide" class="transiton05s">COOL
+                        PAGE</span></div>
+                <hr>
+                <div class="aside-acc aside-row flex-row-sb">
+                    <div class="flex-row-gap"><img class="border-rad-50pc pointer profile-pic"
+                            src="./images/avatar.jpg">
+                        <p id="goingToHide" class="transiton05s">John Doe</p>
+                    </div>
+                    <span class="material-icons" id="goingToHide">arrow_drop_down</span>
                 </div>
-                <span class="material-icons" id="goingToHide">arrow_drop_down</span>
+
+                <hr>
+                <nav class="flex-column-sb">
+                    <ul>
+                        <li class="active aside-row flex-row-sb border-rad-02em pointer">
+                            <div>
+                                <span class="material-icons main-nav-icon">dashboard</span>
+                                <span id="goingToHide">Dashboard</span>
+                            </div>
+                            <span class="material-icons" id="goingToHide">arrow_drop_down</span>
+                        </li>
+
+                        <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
+                            <div class="main-nav flex-row-sb">
+                                <div>
+                                    <span class="material-icons main-nav-icon">image</span>
+                                    <span id="goingToHide">Pages</span>
+                                </div>
+                                <span class="material-icons arrow-drop-down" id="goingToHide">arrow_drop_down</span>
+                            </div>
+
+                            <div class="sub-nav" style="display: none;">
+                                <div><span class="sub-nav-el">P</span>Pricing</div>
+                                <div><span class="sub-nav-el">RS</span>RTL Support</div>
+                                <div><span class="sub-nav-el">T</span>Timeline</div>
+                                <div><span class="sub-nav-el">LP</span>Login Page</div>
+                            </div>
+                        </li>
+
+
+                        <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
+                            <div class="main-nav flex-row-sb">
+                                <div>
+                                    <span class="material-icons main-nav-icon">apps</span>
+                                    <span id="goingToHide">Components</span>
+                                </div>
+                                <span class="material-icons arrow-drop-down" id="goingToHide">arrow_drop_down</span>
+                            </div>
+
+                            <div class="sub-nav" style="display: none;">
+                                <div><span class="sub-nav-el">B</span>Buttons</div>
+                                <div><span class="sub-nav-el">GS</span>Grid System</div>
+                                <div><span class="sub-nav-el">P</span>Panels</div>
+                            </div>
+                        </li>
+
+                        <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
+                            <div class="main-nav flex-row-sb">
+                                <div>
+                                    <span class="material-icons main-nav-icon">assignment</span>
+                                    <span id="goingToHide">Forms</span>
+                                </div>
+                                <span class="material-icons arrow-drop-down" id="goingToHide">arrow_drop_down</span>
+                            </div>
+
+                            <div class="sub-nav" style="display: none;">
+                                <div><span class="sub-nav-el">RF</span>Regular Forms</div>
+                                <div><span class="sub-nav-el">EF</span>Extended Forms</div>
+                            </div>
+                        </li>
+
+                        <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
+                            <div class="main-nav flex-row-sb">
+                                <div>
+                                    <span class="material-icons main-nav-icon">dataset</span>
+                                    <span id="goingToHide">Tables</span>
+                                </div>
+                                <span class="material-icons arrow-drop-down" id="goingToHide">arrow_drop_down</span>
+                            </div>
+
+                            <div class="sub-nav" style="display: none;">
+                                <div><span class="sub-nav-el">T1</span>Tabel 1</div>
+                                <div><span class="sub-nav-el">T2</span>Tabel 2</div>
+                            </div>
+                        </li>
+
+                        <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
+                            <div class="main-nav flex-row-sb">
+                                <div>
+                                    <span class="material-icons main-nav-icon">map</span>
+                                    <span id="goingToHide">Maps</span>
+                                </div>
+                                <span class="material-icons arrow-drop-down" id="goingToHide">arrow_drop_down</span>
+                            </div>
+
+                            <div class="sub-nav" style="display: none;">
+                                <div><span class="sub-nav-el">M1</span>Map 1</div>
+                                <div><span class="sub-nav-el">M2</span>Map 2</div>
+                            </div>
+                        </li>
+
+                        <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
+                            <div class="main-nav flex-row-sb">
+                                <div>
+                                    <span class="material-icons main-nav-icon">widgets</span>
+                                    <span id="goingToHide">Widgets</span>
+                                </div>
+                                <span class="material-icons arrow-drop-down" id="goingToHide">arrow_drop_down</span>
+                            </div>
+
+                            <div class="sub-nav" style="display: none;">
+                                <div><span class="sub-nav-el">W1</span>Widget 1</div>
+                                <div><span class="sub-nav-el">W2</span>Widget 2</div>
+                            </div>
+                        </li>
+
+                        <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
+                            <div class="main-nav flex-row-sb">
+                                <div>
+                                    <span class="material-icons main-nav-icon">show_chart</span>
+                                    <span id="goingToHide">Charts</span>
+                                </div>
+                                <span class="material-icons arrow-drop-down" id="goingToHide">arrow_drop_down</span>
+                            </div>
+
+                            <div class="sub-nav" style="display: none;">
+                                <div><span class="sub-nav-el">CT1</span>Chart Type 1</div>
+                                <div><span class="sub-nav-el">CT2</span>Chart Type 2</div>
+                            </div>
+                        </li>
+
+                        <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
+                            <div class="main-nav flex-row-sb">
+                                <div>
+                                    <span class="material-icons main-nav-icon">calendar_month</span>
+                                    <span id="goingToHide">Calendar</span>
+                                </div>
+                                <span class="material-icons arrow-drop-down" id="goingToHide">arrow_drop_down</span>
+                            </div>
+
+                            <div class="sub-nav" style="display: none;">
+                                <div><span class="sub-nav-el">C1</span>Calendar 1</div>
+                                <div><span class="sub-nav-el">C2</span>Calendar 2</div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
             </div>
 
-            <hr>
-            <nav class="flex-column-sb">
-                <ul>
-                    <li class="active aside-row flex-row-sb border-rad-02em pointer">
-                        <div>
-                            <span class="material-icons main-nav-icon">dashboard</span>
-                            <span id="goingToHide">Dashboard</span>
-                        </div>
-                        <span class="material-icons">arrow_drop_down</span>
-                    </li>
-
-                    <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
-                        <div class="main-nav flex-row-sb">
-                            <div>
-                                <span class="material-icons main-nav-icon">image</span>
-                                <span id="goingToHide">Pages</span>
-                            </div>
-                            <span class="material-icons arrow-drop-down">arrow_drop_down</span>
-                        </div>
-                    
-                        <div class="sub-nav" style="display: none;">
-                            <div><span class="sub-nav-el">P</span>Pricing</div>
-                            <div><span class="sub-nav-el">RS</span>RTL Support</div>
-                            <div><span class="sub-nav-el">T</span>Timeline</div>
-                            <div><span class="sub-nav-el">LP</span>Login Page</div>
-                        </div>
-                    </li>
-                    
-
-                    <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
-                        <div class="main-nav flex-row-sb">
-                            <div>
-                                <span class="material-icons main-nav-icon">apps</span>
-                                <span id="goingToHide">Components</span>
-                            </div>
-                            <span class="material-icons arrow-drop-down">arrow_drop_down</span>
-                        </div>
-
-                        <div class="sub-nav" style="display: none;">
-                            <div><span class="sub-nav-el">B</span>Buttons</div>
-                            <div><span class="sub-nav-el">GS</span>Grid System</div>
-                            <div><span class="sub-nav-el">P</span>Panels</div>
-                        </div>
-                    </li>
-
-                    <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
-                        <div class="main-nav flex-row-sb">
-                            <div>
-                                <span class="material-icons main-nav-icon">assignment</span>
-                                <span id="goingToHide">Forms</span>
-                            </div>
-                            <span class="material-icons arrow-drop-down">arrow_drop_down</span>
-                        </div>
-
-                        <div class="sub-nav" style="display: none;">
-                            <div><span class="sub-nav-el">RF</span>Regular Forms</div>
-                            <div><span class="sub-nav-el">EF</span>Extended Forms</div>
-                        </div>
-                    </li>
-
-                    <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
-                        <div class="main-nav flex-row-sb">
-                            <div>
-                                <span class="material-icons main-nav-icon">dataset</span>
-                                <span id="goingToHide">Tables</span>
-                            </div>
-                            <span class="material-icons arrow-drop-down">arrow_drop_down</span>
-                        </div>
-
-                        <div class="sub-nav" style="display: none;">
-                            <div><span class="sub-nav-el">T1</span>Tabel 1</div>
-                            <div><span class="sub-nav-el">T2</span>Tabel 2</div>
-                        </div>
-                    </li>
-
-                    <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
-                        <div class="main-nav flex-row-sb">
-                            <div>
-                                <span class="material-icons main-nav-icon">map</span>
-                                <span id="goingToHide">Maps</span>
-                            </div>
-                            <span class="material-icons arrow-drop-down">arrow_drop_down</span>
-                        </div>
-
-                        <div class="sub-nav" style="display: none;">
-                            <div><span class="sub-nav-el">M1</span>Map 1</div>
-                            <div><span class="sub-nav-el">M2</span>Map 2</div>
-                        </div>
-                    </li>
-
-                    <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
-                        <div class="main-nav flex-row-sb">
-                            <div>
-                                <span class="material-icons main-nav-icon">widgets</span>
-                                <span id="goingToHide">Widgets</span>
-                            </div>
-                            <span class="material-icons arrow-drop-down">arrow_drop_down</span>
-                        </div>
-
-                        <div class="sub-nav" style="display: none;">
-                            <div><span class="sub-nav-el">W1</span>Widget 1</div>
-                            <div><span class="sub-nav-el">W2</span>Widget 2</div>
-                        </div>
-                    </li>
-
-                    <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
-                        <div class="main-nav flex-row-sb">
-                            <div>
-                                <span class="material-icons main-nav-icon">show_chart</span>
-                                <span id="goingToHide">Charts</span>
-                            </div>
-                            <span class="material-icons arrow-drop-down">arrow_drop_down</span>
-                        </div>
-
-                        <div class="sub-nav" style="display: none;">
-                            <div><span class="sub-nav-el">CT1</span>Chart Type 1</div>
-                            <div><span class="sub-nav-el">CT2</span>Chart Type 2</div>
-                        </div>
-                    </li>
-
-                    <li class="aside-row border-rad-02em pointer" onclick="toggleSubNav(event)">
-                        <div class="main-nav flex-row-sb">
-                            <div>
-                                <span class="material-icons main-nav-icon">calendar_month</span>
-                                <span id="goingToHide">Calendar</span>
-                            </div>
-                            <span class="material-icons arrow-drop-down">arrow_drop_down</span>
-                        </div>
-
-                        <div class="sub-nav" style="display: none;">
-                            <div><span class="sub-nav-el">C1</span>Calendar 1</div>
-                            <div><span class="sub-nav-el">C2</span>Calendar 2</div>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
         </aside>
     </div>
 
     <div class="right-side flex-column-gap">
 
         <header class="flex-row-sb">
-            <div class="header-left">
+            <div class="header-left flex-row-gap03">
                 <span title="more"
                     class="material-icons header-bttn box-shadow-header border-rad-50pc hide-below-1000px transiton05s round-bttn"
                     id="sidebarBtn">more_vert</span>
-                <span style="font-size: 1.2em;">Dashboard</span>
+                <span style="font-size: 1.2em;" class="hide-under600px">Dashboard</span>
+                <span title="settings" class="material-icons settings-under600px show-below-600px pointer"
+                    id="settingsButtonBelow600" onclick="hello()">settings</span>
+            </div>
+            <div>
+
             </div>
             <span title="menu" id="menuIcon" class="show-below-1000px material-icons menu-icon">menu</span>
             <div class="header-right flex-row-gap03 hide-below-1000px">
@@ -192,7 +236,7 @@
                 </span>
 
                 <span title="profile" class="material-icons ">person</span>
-                <span title="settings" class="material-icons settings">settings</span>
+                <span title="settings" class="material-icons settings" id="settingsButtonAbove1000">settings</span>
             </div>
         </header>
 
@@ -422,8 +466,8 @@
         </footer>
     </div>
 
-    <script src="./js/arrays.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/settings.js"></script>
 </body>
 
 </html>
