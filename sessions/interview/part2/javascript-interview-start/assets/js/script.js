@@ -1,9 +1,9 @@
-const movieGernes      = document.querySelector('.movieGernes');
+const movieGernes      = document.querySelector('.    ');
 const movielist        = document.querySelector('.movielist');
 const movieDetailsPage = document.querySelector('.movie-details-page');
 
 populateMovies(0);
-loadDetailPage(0, 2);
+loadDetailPage(0, 2); 
 
 /* Dropdown for Gernes */
 let buildGernes = '';

@@ -175,3 +175,6 @@ menuBtn.onclick = function() {
     sideBar.classList.toggle('slide-in-left');
     menuBtn.classList.toggle('slide-in-left');
 };
+
+
+//The cards

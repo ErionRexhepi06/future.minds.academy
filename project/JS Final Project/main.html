@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
@@ -352,104 +353,16 @@
             <section class="section3 flex-column-gap">
                 <h1>Manage Listings</h1>
 
-                <div class="section3-display flex-row-sb"><article class="section3-article1 border-rad-02em box-shadow-all4 border-rad-05em">
-                    <div class="image-area-section3">
-                        <img class="pointer main-img-section3 border-rad-05em" src="./images/card-1.jpeg">
-                        <div class="image-options-section3 flex-row-gap">
-                            <span title="View" class="pointer material-icons gray">image</span>
-                            <span title="Edit" class="pointer material-icons green">edit</span>
-                            <span title="Delete" class="pointer material-icons red"><b>close</b></span>
-                        </div>
-                    </div>
-                    <div class="flex-column-sb">
-                        <div class="info-section3">
-                            <h3>Beautiful caslte</h3>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni esse tenetur libero
-                                nemo
-                                delectus
-                                nisi! Soluta harum nesciunt, quas, illo, repellendus ducimus iste consectetur
-                                officia
-                                odio
-                                earum
-                                nobis. Voluptate, magnam.
-                            </p>
-                        </div>
-                        <hr>
-                        <div class="flex-row-sb bottom-article-section3">
-                            <span>$899/night</span>
-                            <div class="font-size-08em"><span class="material-icons">location_on</span>Barcelona,Spain
-                            </div>
-                        </div>
-                    </div>
-
-                </article>
-
-                <article class="section3-article2 border-rad-02em box-shadow-all4 border-rad-05em">
-                    <div class="image-area-section3">
-                        <img class="pointer main-img-section3 border-rad-05em" src="./images/card-2.jpeg">
-                        <div class="image-options-section3 flex-row-gap">
-                            <span title="View" class="pointer material-icons gray">image</span>
-                            <span title="Edit" class="pointer material-icons green">edit</span>
-                            <span title="Delete" class="pointer material-icons red"><b>close</b></span>
-                        </div>
-                    </div>
-                    <div class="flex-column-sb">
-                        <div class="info-section3">
-                            <h3>Office Studio</h3>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla eius maxime ullam
-                                officia
-                                natus
-                                consectetur inventore sit cupiditate quidem error magnam modi neque magni
-                                architecto,
-                                eligendi
-                                sapiente nobis ex maiores!
-                            </p>
-                        </div>
-                        <hr>
-                        <div class="flex-row-sb bottom-article-section3">
-                            <span>$1.119/night</span>
-                            <div class="font-size-08em"><span class="material-icons">location_on</span>London,UK</div>
-                        </div>
-                    </div>
-
-                </article>
-
-                <article class="section3-article3 border-rad-02em box-shadow-all4 border-rad-05em">
-                    <div class="image-area-section3">
-                        <img class="pointer main-img-section3 border-rad-05em" src="./images/card-3.jpeg">
-                        <div class="image-options-section3 flex-row-gap">
-                            <span title="View" class="pointer material-icons gray">image</span>
-                            <span title="Edit" class="pointer material-icons green">edit</span>
-                            <span title="Delete" class="pointer material-icons red"><b>close</b></span>
-                        </div>
-                    </div>
-                    <div class=" flex-column-sb">
-                        <div class="info-section3">
-                            <h3>Cozy 5 Star Apartment</h3>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni esse tenetur libero
-                                nemo
-                                delectus
-                                nisi! Soluta harum nesciunt, quas, illo, repellendus ducimus iste consectetur
-                                officia
-                                odio
-                                earum
-                                nobis. Voluptate, magnam.
-                            </p>
-                        </div>
-                        <hr>
-                        <div class="flex-row-sb bottom-article-section3">
-                            <span>$459/night</span>
-                            <div class="font-size-08em"><span class="material-icons">location_on</span>Milan,Italy</div>
-                        </div>
-                    </div>
-
-                </article></div>
-                <div class="image-view" style="display: none;">
-                    <div class="image-div-display">
-                        <button class="close-button">&times;</button>
+                <div class="section3-display flex-row-sb" id="cardContainer"></div>
+                <div class="image-view">
+                    <button class="close-button">&times;</button>
+                    <img src="" alt="Full Size Image">
+                </div>
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <input type="text" id="textInput" placeholder="Enter text...">
+                        <button id="saveButton">Save</button>
                     </div>
                 </div>
                 

@@ -5,7 +5,7 @@ buildGernes();
 listAllMovies(0);
 
 function buildGernes(){
-    let allOptions="";
+    let allOptions=""; 
     for(let i=0; i<allMovies.length; i++ ){
         allOptions += '<option value="'+i+'">'+allMovies[i].gerne+'</option>';
     }
