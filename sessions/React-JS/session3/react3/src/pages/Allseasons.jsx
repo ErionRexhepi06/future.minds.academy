@@ -3,8 +3,7 @@ import Footer from
 
 export default function Allseasons() {
     return (
-        <Nav/>
-        <main class="row">
+        <><Nav /><main class="row">
             <div class="col">
                 <h1 class="text-center">Welcome to all seasons!</h1>
                 <div>
@@ -21,7 +20,6 @@ export default function Allseasons() {
                 </div>
 
             </div>
-        </main>
-        <Footer/>
+        </main><Footer /></>
     )
 }
