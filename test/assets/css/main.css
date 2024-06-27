@@ -239,7 +239,7 @@ li{
     color: white;
     padding: .5em;
     border-radius: 1em;
-    width: 40%;
+    width: 49%;
     border:  1px solid green;
 }
 
@@ -248,7 +248,7 @@ li{
     color: red;
     padding: .5em;
     border-radius: 1em;
-    width:40%;
+    width:49%;
     border: 1px solid red;
     transition: all .4s cubic-bezier(.25, .4, .45, 1.4);
 }
