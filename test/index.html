@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    <title>TO-DO</title>
+    <link rel="stylesheet" href="./assets/css/fma-general.css">
+    <link rel="stylesheet" href="./assets/css/fma-responsive.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+    <div class="row p-1 min-height100vh gap-3">
+        <button class="show-aside pointer block-tablet" onclick="showAside()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#black"><path d="M360-200v-80h480v80H360Zm0-240v-80h480v80H360Zm0-240v-80h480v80H360ZM200-160q-33 0-56.5-23.5T120-240q0-33 23.5-56.5T200-320q33 0 56.5 23.5T280-240q0 33-23.5 56.5T200-160Zm0-240q-33 0-56.5-23.5T120-480q0-33 23.5-56.5T200-560q33 0 56.5 23.5T280-480q0 33-23.5 56.5T200-400Zm0-240q-33 0-56.5-23.5T120-720q0-33 23.5-56.5T200-800q33 0 56.5 23.5T280-720q0 33-23.5 56.5T200-640Z"/></svg></button>
+
+        <aside class="col-1 remove-tablet">
+            <div class="row-direction gap-2">
+                <div class="aside-top">
+                    <h1 class="p-2">TO-DO</h1>
+                    <div class="circles-div row just-between">
+                        <img src="./assets/images/open-circle.svg"/>
+                        <img src="./assets/images/open-circle.svg"/>
+                        <img src="./assets/images/open-circle.svg"/>
+                        <img src="./assets/images/open-circle.svg"/>
+                        <img src="./assets/images/open-circle.svg"/>
+                    </div>
+                </div>
+                
+                <!--buttons for: yesterday today tomorrow and all-->
+                <div class="row-direction gap-1 btn-div p-1">
+                    <button class="row gap-1 p-0 align-center pointer btn1"><img class="bcg-light-blue" src="./assets/images/calendar.svg" alt="yesterday"><span class="row just-center align-center">Yesterday</span></button>
+                    <hr>
+                    <button class="row gap-1 p-0 align-center pointer btn1"><img class="bcg-light-blue" src="./assets/images/calendar.svg" alt="today"><span>Today</span></button>
+                    <hr>
+                    <button class="row gap-1 p-0 align-center pointer btn1"><img class="bcg-light-blue" src="./assets/images/calendar.svg" alt="tomorrow"><span>Tomorrow</span></button>
+                    <hr>
+                    <button class="row gap-1 p-0 align-center pointer btn1"><img class="bcg-light-green" src="./assets/images/all-infinite.svg" alt="all" title="all"> <span>All</span></button>
+                    <hr>
+                </div>
+            </div>
+        </aside>
+
+        <main class="col-4 row-direction p-2 gap-2">
+            <!--the forms-->
+            <form class="row gap-1 align-center" action="">
+                <input class="input-text p-0" type="text" placeholder="Add Task Here..." />
+
+                <br/>
+
+                <label for="checkbox" class="pointer">Important?</label>
+                <input class="margin-right-1em pointer" type="checkbox" name="" id="checkbox" />
+
+                <input class="margin-right-1em pointer height-2-5em" type="date" name="" id="date" />
+
+                <input class="margin-right-1em pointer height-2-5em" type="time" name="" id="time" />
+
+                <input class="margin-right-1em pointer height-2-5em" type="color" name="" id="color" />
+
+                <button class="add-btn pointer" type="submit"> ADD </button>
+            </form>
+
+            <!--the list with its wrapper-->
+            <div class="list-wrapper">
+                <div class="row just-between top-list">
+                    <h2>Tasks List</h2>
+                    <div class="circle">.</div>
+                </div>
+                <ul class="list">
+                    <li>hello</li>
+                    <li>hi!!!!!</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script>
+    function showAside() {
+        let aside = document.querySelector('aside');
+        aside.classList.toggle('remove-tablet');
+    }
+    
+    </script>
+
+</body>
+
+</html>
