@@ -193,6 +193,14 @@
     flex:4;
 }
 
+.col-5{
+    flex:5
+}
+
+.col-6{
+    flex: 6;
+}
+
 /* Align and justify Conentent */
 
 .just-start{
