@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Carousel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-carousel {
+            overflow-x: auto;
+            display: flex;
+            justify-content: center;
+            -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
+            scroll-snap-type: x mandatory;
+            padding: 1em 0; /* Add padding for better visibility */
+        }
+
+        .nav-carousel ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-carousel li {
+            flex: 0 0 auto; /* Prevent shrinking */
+            scroll-snap-align: center;
+            margin: 0 1em;
+        }
+
+        .nav-carousel a {
+            text-decoration: none;
+            color: #333;
+            padding: 0.5em 1em;
+            display: block;
+            text-align: center;
+        }
+
+        /* Center alignment using pseudo-elements */
+        .nav-carousel ul:before,
+        .nav-carousel ul:after {
+            content: '';
+            flex: 0 0 50vw;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-carousel">
+        <ul>
+            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            <!-- Add more nav items as needed -->
+        </ul>
+    </nav>
+</body>
+</html>
