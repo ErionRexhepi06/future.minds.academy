@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const PORT = 3000;
 
 let products = [
   { id: 1, name: 'Maic', price: 19.99 },
@@ -10,7 +9,7 @@ let products = [
   { id: 5, name: 'Kapuc', price: 30.00 },
 ];
 
-app.use(express.json()); // Automatically parse JSON bodies
+app.use(express.json());
 
 app.get('/products', (req, res) => {
   res.status(200).json(products);
@@ -58,6 +57,6 @@ app.delete('/products/:id', (req, res) => {
   res.status(204).send();
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+app.listen(3000, () => {
+  console.log(`Server is running on http://localhost:3000`);
 });
