@@ -16,7 +16,7 @@ const ToDoForm = ({ addTask }) => {
       setTime('');
       setIsImportant(false);
       setColor('#000000');
-    }
+    } 
   };
 
   return (

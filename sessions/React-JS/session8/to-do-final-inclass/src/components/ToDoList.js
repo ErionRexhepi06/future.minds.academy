@@ -1,7 +1,7 @@
 import React from 'react';
 import ToDoItem from './ToDoItem';
 
-const ToDoList = ({ tasks, toggleCompleted, updateTask, filterTasks }) => {
+const ToDoList = ({ tasks, toggleCompleted, updateTask}) => {
   return (
     <div>
       <div>

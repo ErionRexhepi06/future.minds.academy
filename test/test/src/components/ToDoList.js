@@ -1,7 +1,7 @@
 import React from 'react';
 import ToDoItem from './ToDoItem';
 
-const ToDoList = ({ tasks, toggleCompleted, updateTask }) => {
+const ToDoList = ({ tasks }) => {
   return (
     <div className="list-wrapper">
       <div className="row just-between top-list">
@@ -10,13 +10,7 @@ const ToDoList = ({ tasks, toggleCompleted, updateTask }) => {
       </div>
       <ul className="list row-direction gap-1 just-center">
         {tasks.map((task, index) => (
-          <ToDoItem 
-            key={index} 
-            task={task} 
-            index={index} 
-            toggleCompleted={toggleCompleted} 
-            updateTask={updateTask} 
-          />
+          <ToDoItem key={index} task={task} index={index} />
         ))}
       </ul>
     </div>

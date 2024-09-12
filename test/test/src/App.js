@@ -9,8 +9,6 @@ import './styles/main.css';
 
 function App() {
   const [tasks, setTasks] = useState([]);
-  const [filteredTasks, setFilteredTasks] = useState([]);
-  const [filter, setFilter] = useState('all');
 
   useEffect(() => {
     const storedTasks = JSON.parse(localStorage.getItem('tasks'));
@@ -19,57 +17,10 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
-    filterTasks(filter);
-  }, [tasks, filter]);
+  }, [tasks]);
 
   const addTask = (task) => {
     setTasks([...tasks, task]);
-  };
-
-  const toggleCompleted = (index) => {
-    const newTasks = tasks.map((task, i) => {
-      if (i === index) {
-        return { ...task, isCompleted: !task.isCompleted };
-      }
-      return task;
-    });
-    setTasks(newTasks);
-  };
-
-  const updateTask = (index, updatedTask) => {
-    const newTasks = tasks.map((task, i) => {
-      if (i === index) {
-        return updatedTask;
-      }
-      return task;
-    });
-    setTasks(newTasks);
-  };
-
-  const filterTasks = (filter) => {
-    setFilter(filter);
-    const today = new Date().toISOString().split('T')[0];
-    let filtered = tasks;
-
-    switch (filter) {
-      case 'yesterday':
-        const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
-        filtered = tasks.filter(task => task.date === yesterday);
-        break;
-      case 'today':
-        filtered = tasks.filter(task => task.date === today);
-        break;
-      case 'tomorrow':
-        const tomorrow = new Date(Date.now() + 86400000).toISOString().split('T')[0];
-        filtered = tasks.filter(task => task.date === tomorrow);
-        break;
-      case 'all':
-      default:
-        filtered = tasks;
-        break;
-    }
-
-    setFilteredTasks(filtered);
   };
 
   return (
@@ -80,11 +31,11 @@ function App() {
         </svg>
       </button>
       
-      <Sidebar filterTasks={filterTasks} />
-
+      <Sidebar />
+      
       <main className="col-4 row-direction p-2 gap-2">
         <ToDoForm addTask={addTask} />
-        <ToDoList tasks={filteredTasks} toggleCompleted={toggleCompleted} updateTask={updateTask} />
+        <ToDoList tasks={tasks} />
       </main>
     </div>
   );

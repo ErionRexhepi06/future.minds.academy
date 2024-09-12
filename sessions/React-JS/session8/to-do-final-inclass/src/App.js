@@ -65,8 +65,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>To-Do List</h1>
-        <ToDoForm addTask={addTask} />
-        <ToDoList tasks={filteredTasks.length ? filteredTasks : tasks} toggleCompleted={toggleCompleted} updateTask={updateTask} filterTasks={filterTasks} />
+        <ToDoForm addTask={addTask} tasks={filteredTasks.length ? filteredTasks : tasks} />
+        <ToDoList toggleCompleted={toggleCompleted} updateTask={updateTask} filterTasks={filterTasks} />
       </header>
     </div>
   );
