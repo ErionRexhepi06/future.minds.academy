@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: sans-serif;
+            text-transform: capitalize;
+            box-sizing: border-box; /* Ensure padding and borders don't affect width/height */
+        }
+
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+        }
+
+        .login-fb {
+            width: 90%;
+            max-width: 500px; /* Set a maximum width for the login container */
+            background-color: white; /* Add background for better contrast */
+            border-radius: 14px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            padding: 20px; /* Add some padding around */
+        }
+
+        .info {
+            text-align: center; /* Center align the text */
+            margin-bottom: 20px; /* Space between image/form */
+        }
+
+        .image img {
+            width: 80%; /* Responsive width for the image */
+            max-width: 20em; /* Max width for the image */
+            margin-bottom: 15px; /* Space below the image */
+        }
+
+        .info h2 {
+            color: black;
+            font-weight: 100;
+            font-size: 28px;
+            margin: 8px 0 -12px;
+        }
+
+        .info p {
+            font-size: 15px;
+            margin-top: 21px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%; /* Full width */
+        }
+
+        form input {
+            width: 90%; /* Responsive input width */
+            padding: 16px;
+            border-radius: 6px;
+            outline: none;
+            border: 1px solid #ccc;
+            margin-top: 13px;
+        }
+
+        form input::placeholder {
+            font-size: 17px;
+            color: rgb(167, 167, 167);
+            font-weight: 300;
+        }
+
+        form input:focus:not(form input[type="submit"]) {
+            border: 1px solid #1473ef;
+            box-shadow: 0px 0px 2px #1473ef;
+        }
+
+        form input[type="submit"] {
+            background: #1473ef;
+            color: white;
+            font-size: 23px;
+            font-weight: bold;
+            height: 51px;
+            margin-top: 20px; /* Space above submit button */
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #116ee8;
+            cursor: pointer;
+        }
+
+        form a {
+            margin-top: 20px;
+            text-decoration: none;
+            color: #1b4cfd;
+        }
+
+        form a:hover {
+            text-decoration: underline;
+        }
+
+        form .new {
+            margin-top: 18px;
+            padding-top: 7px;
+            border-top: 1px solid #ccc;
+            width: 100%;
+        }
+
+        form .new p {
+            background: #42b72a;
+            color: white;
+            padding: 17px 20px;
+            border-radius: 7px;
+            width: fit-content;
+            margin: 14px auto;
+        }
+
+        form .new p:hover {
+            background-color: #35a51e;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="image">
+        <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="Facebook Logo">
+    </div>
+    <div class="login-fb">
+
+        <div class="info">
+            <h2>Welcome Back</h2>
+            <p>Log in to your account</p>
+        </div>
+        <form method="post" action="#">
+            <input name="email" class="email" type="email" placeholder="Email or phone number" required/>
+            <p class="text"></p>
+            <input name="password" class="password" type="password" placeholder="Password" required>
+            <input class="subm" type="submit" value="Log in">
+            <a href="" class="forgot">forgotten password?</a>
+            <div class="new">
+                <p>create new account</p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+</html>

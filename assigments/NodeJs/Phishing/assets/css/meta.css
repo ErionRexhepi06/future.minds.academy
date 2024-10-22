@@ -1,0 +1,106 @@
+/* meta.css */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: row;
+    background-color: #8ccbff;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.img-cont {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex: 1.4;
+    padding: 1%;
+}
+
+.bcg-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 2em;
+}
+
+.text-div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+    box-sizing: border-box;
+    justify-content: center;
+    height: 100%;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    color: #6F00FF;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+p{
+    font-family: sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    text-align: center;
+    color: #3457D5;
+}
+
+.pages-div{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    align-items: center;
+    margin-top: 2em;
+}
+
+button{
+    border: none;
+    width: 80%;
+    border-radius: 1em;
+    cursor: pointer;
+    transition: 1s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-inline: 1em;
+}
+
+
+.insta-btn{ background: linear-gradient(94deg, rgba(215,82,184,1) 5%, rgba(227,222,73,1) 88%);}
+.fb-btn{background: linear-gradient(94deg, rgba(2,87,172,1) 10%, rgba(24,183,213,1) 100%);}
+.wapp{background: linear-gradient(94deg, rgba(59,219,22,0.9108018207282913) 27%, rgba(136,198,111,1) 100%);}
+
+
+button div{
+    flex: 1;
+    display: flex;
+    color: white;
+    align-items: center;
+    gap: 2em;
+}
+button div p {color: white; font-weight: 500;}
+button div i{ font-size: 2em;}
+i{color: white;}
+
+.insta-btn:hover{background: linear-gradient(94deg, rgba(215,82,184,1) 50%, rgba(227,222,73,1) 88%);}
+.fb-btn:hover{background: linear-gradient(94deg, rgba(2,87,172,1) 50%, rgba(24,183,213,1) 100%);}
+.wapp:hover{background: linear-gradient(94deg, rgb(86, 235, 52) 60%, rgb(133, 223, 97) 80%);}
