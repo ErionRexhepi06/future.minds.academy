@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Form</title>
+</head>
+<body>
+
+    <form id="dropdownForm">
+        <label for="dropdown">Choose an item:</label>
+        <select id="dropdown" name="dropdown"></select>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // Array of dropdown options
+        const items = ["Apple", "Banana", "Cherry", "Mango", "Orange"];
+
+        // Get dropdown element
+        const dropdown = document.getElementById("dropdown");
+
+        // Populate dropdown with items
+        items.forEach(item => {
+            let option = document.createElement("option");
+            option.value = item;
+            option.textContent = item;
+            dropdown.appendChild(option);
+        });
+
+        // Handle form submission
+        document.getElementById("dropdownForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent page reload
+            console.log("Selected item:", dropdown.value);
+        });
+    </script>
+
+</body>
+</html>

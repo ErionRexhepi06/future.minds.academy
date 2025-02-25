@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="dropdownForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="dropdown">Choose an item:</label>
+        <select id="dropdown" name="dropdown">
+            <option value="" disabled selected>Select an item</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const items = ["Pizza", "Burger", "Sushi", "Pasta", "Salad"];
+        const dropdown = document.getElementById("dropdown");
+
+        items.forEach(item => {
+            let option = document.createElement("option");
+            option.value = item;
+            option.textContent = item;
+            dropdown.appendChild(option);
+        });
+
+        document.getElementById("dropdownForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            const name = document.getElementById("name").value;
+            const selectedItem = dropdown.value;
+            console.log(`Name: ${name}`);
+            console.log(`Selected item: ${selectedItem}`);
+        });
+    </script>
+
+</body>
+</html>
